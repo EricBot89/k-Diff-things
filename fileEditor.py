@@ -111,6 +111,8 @@ def read():
 def append():	
 	WorkingFile = pickfile(2)
 	clr()
+	wfr = open(WorkingFile, "rb")
+	shapefile = pickle.load(wfr)
 	while True:
 		clr()
 		current = WorkingFile
@@ -127,8 +129,6 @@ def append():
 			newlines = []	
 			while True:
 				clr()
-				wfr = open(WorkingFile, "rb")
-				oldlines = pickle.load(wfr)
 				print('Press 1 to add a new shape, press 2 to commit changes, press 0 to quit without commit')
 				print('Shapes entered:',newlines)
 				newnav = input()
@@ -136,34 +136,30 @@ def append():
 					inshape = inputAngles()
 					newlines.append(inshape)
 				elif int(newnav) == 2:
-					alllines = oldlines.append(newlines)
+					newshapefile = shapefile.extend(newlines)
 					wfw = open(WorkingFile, "wb")
-					pickle.dump(alllines,wfw)
+					pickle.dump(newshapefile,wfw)
+					wfw.close()  
 					break
 				elif int(newnav) == 0:
 					break
 				else:
-					clear()
+					clr()
 					print('what?')
 					wait()
-		elif int(nav) == 2:
+		elif int(nav)==2:
 			clr()
 			i=1
-			wfr = open(WorkingFile, "rb")
-			oldlines = pickle.load(wfr)
 			print("indices	|	Shape Data")
-			for shapes in oldlines:
+			for shapes in shapefile:
 				print(i,"	|","	".join(map(str,shapes)))
 				i=i+1
 			wait()
 		elif int(nav)==5:
 			clr()
-			wfr.close()
-			wfw.close()
 			WorkingFile = pickfile(2)
 			wait()
 		elif int(nav) == 0:
-			WorkingFile.close()
 			break
 		else:
 			clear()
@@ -193,13 +189,13 @@ def writeNew():
 				print('Shapes entered:', newlines)
 				newnav = input()
 				clr()
-				if  int(newnav) == 1:
+				if  int(newnav)==1:
 					inshape = inputAngles()
 					newlines.append(inshape)
-				elif int(newnav) == 2:
+				elif int(newnav)==2:
 					pickle.dump(newlines,WorkingFile)
 					break
-				elif int(newnav) == 0:
+				elif int(newnav)==0:
 					break
 				else:
 					print('what?')
