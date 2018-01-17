@@ -5,7 +5,7 @@ def clr():
 	os.system('clear') #you'll need to change  this if you're on windows
 
 def wait():
-	input("\033[36m""	press  enter to continue""\033[0m")
+	input("\033[36m Press  enter to continue""\033[0m")
 
 print('This is a thing for creating and editing files containing lots of  "shapes."')
 

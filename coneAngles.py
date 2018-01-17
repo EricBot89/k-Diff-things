@@ -3,9 +3,12 @@ import functools
 import os
 import time
 
+def clr():
+	os.system('clear') #you'll need to change  this if you're on windows
+
 def wait():
 	print("")
-	input("\033[36m""press  enter to continue""\033[0m")
+	input("\033[36m Press enter to continue""\033[0m")
 
 def lcm(x,y):
 	return ((x*y)//math.gcd(x,y))
@@ -83,7 +86,7 @@ def inputAngles():
 	anglein = []
 	wait()
 	while  anglein != [0,0,0]:
-		os.system('clear')
+		clr()
 		print(" "'0,0,0 ends')
 		print("\033[4m",'current shape:', angleList,"\033[0m")
 		anglestring = input()
@@ -111,7 +114,7 @@ def inputAngles():
 			print("you've done something wrong")
 			wait()
 			
-os.system('clear')
+clr()
 opts = {}
 opts[1] = 'Enter a new  shape'
 opts[2] = 'Find Everything'
@@ -134,54 +137,54 @@ while True:
 		print('--------------------------------------------------------------------------------------------------------------------------------------------------')
 		nav = input()
 		if int(nav) == 0:
-			os.system('clear')
+			clr()
 			break
 		elif int(nav) == 2:
-			os.system('clear')
+			clr()
 			print("K=", getK(polygonAngles))
 			print("Zeroes of K differential = ", getKdiffZeros(polygonAngles))
 			print("Zeroes of the cover = ", abelianZeros(polygonAngles))
 			print("Genus of the cover = " , genusFinder(polygonAngles))
 			print("\n")
 			wait()
-			os.system('clear')
+			clr()
 		elif int(nav) == 1:
-			os.system('clear')
+			clr()
 			polygonAngles = inputAngles()
 			wait()
-			os.system('clear')
+			clr()
 		elif int(nav)==3:
-			os.system('clear')
+			clr()
 			print(getK(polygonAngles))
 			wait()
-			os.system('clear')
+			clr()
 		elif int(nav)==4:
-			os.system('clear')
+			clr()
 			print(getKdiffZeros(polygonAngles))
 			wait()
-			os.system('clear')
+			clr()
 		elif int(nav)==5:
-			os.system('clear')
+			clr()
 			print(abelianZeros(polygonAngles))
 			wait()
-			os.system('clear')	
+			clr()	
 		elif int(nav)==6:
-			os.system('clear')
+			clr()
 			print(genusFinder(polygonAngles))
 			wait()
-			os.system('clear')
+			clr()
 		elif int(nav) == 8:
-			os.system('clear')
+			clr()
 			print(polygonAngles)
 			wait()
-			os.system('clear')
+			clr()
 		elif int(nav) == 9:
-			os.system('clear')
+			clr()
 			print("\n")
 			print('Hi!')
 			print("\n")
 			time.sleep(2)
-			os.system('clear')
+			clr()
 			print("This program is a a calcualtor.")
 			print("")
 			print("It takes the angles of some flat surface (e.g. a polyhedron) and spits out")
@@ -191,9 +194,9 @@ while True:
 			print("surfaces generated from polygons with rational angles. It will only work for")
 			print("flat surfaces where all the cone angles are rational angles.")
 			wait()
-			os.system('clear')
+			clr()
 		else:
-			os.system('clear')
+			clr()
 			print('what?')
 			wait()
-			os.system('clear')
+			clr()
