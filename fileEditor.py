@@ -112,7 +112,8 @@ def append():
 	WorkingFile = pickfile(2)
 	clr()
 	wfr = open(WorkingFile, "rb")
-	shapefile = pickle.load(wfr)
+	shapefile = list(pickle.load(wfr))
+	wfr.close()
 	while True:
 		clr()
 		current = WorkingFile
@@ -142,6 +143,7 @@ def append():
 					wfw.close()  
 					break
 				elif int(newnav) == 0:
+					
 					break
 				else:
 					clr()
