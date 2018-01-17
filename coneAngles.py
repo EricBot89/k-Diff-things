@@ -4,7 +4,8 @@ import os
 import time
 
 def wait():
-	input("\033[36m""	press  enter to continue""\033[0m")
+	print("")
+	input("\033[36m""press  enter to continue""\033[0m")
 
 def lcm(x,y):
 	return ((x*y)//math.gcd(x,y))
@@ -75,8 +76,9 @@ def genusFinder(angleList):
 	return functools.reduce(multiLcm,abelianZeros(angleList))
 
 def inputAngles():
-	print("\033[4m","\033[1m",'shapes are lists of angles, and each angle should be a space delimited  list of the form:',"\033[0m")
-	print('numerator denominator multiplicity')
+	print("\033[4m","\033[1m",'shapes are lists of angles, and each angle should be a space delimited list',"\033[0m")
+	print("\033[4m",'angle inputs should take the form:'"\033[0m",'numerator denominator multiplicity')
+	print("")
 	angleList = []
 	anglein = []
 	wait()
@@ -88,12 +90,17 @@ def inputAngles():
 		anglein = list(map(int,anglestring.split()))
 		if len(anglein) == 3  and anglein[1] != 0 and anglein[2] != 0:
 			angleList.append(anglein)
-			wait()
 		elif len(anglein) != 3:
 			print('this is formatted wrongly')
 			wait()
 		elif anglein == [0,0,0]:
-			return angleList
+			if len(angleList) == 0:
+				anglein = [0,0,1]
+				print('add some angles!')
+				print("")
+				wait()
+			else:
+				return angleList
 		elif anglein[1] == 0:
 			print('cannot divide by 0')
 			wait()
@@ -103,7 +110,8 @@ def inputAngles():
 		else:
 			print("you've done something wrong")
 			wait()
-
+			
+os.system('clear')
 opts = {}
 opts[1] = 'Enter a new  shape'
 opts[2] = 'Find Everything'
@@ -117,7 +125,7 @@ opts[9] = 'Hi'
 opts[0] = 'Quit'
 print("\033[4m","\033[1m", 'This is the Cone Angle Calculator',"\033[0m")
 time.sleep(1)
-print(" ",'Use number keys to select menu options, press any key to continue when needed')
+print(" ",'Use number keys to select menu options')
 time.sleep(1)
 polygonAngles = [[1,1,1]]
 while True:
@@ -170,8 +178,18 @@ while True:
 		elif int(nav) == 9:
 			os.system('clear')
 			print("\n")
-			print('hi')
+			print('Hi!')
 			print("\n")
+			time.sleep(2)
+			os.system('clear')
+			print("This program is a a calcualtor.")
+			print("")
+			print("It takes the angles of some flat surface (e.g. a polyhedron) and spits out")
+			print("some info about the cannocnical K covering which lies above your flat surface.")
+			print("\n")
+			print("This tool might be useful if you want to know somthing about translation")
+			print("surfaces generated from polygons with rational angles. It will only work for")
+			print("flat surfaces where all the cone angles are rational angles.")
 			wait()
 			os.system('clear')
 		else:
