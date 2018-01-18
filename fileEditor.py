@@ -23,7 +23,6 @@ def inputAngles():
 		anglein = list(map(int,anglestring.split()))
 		if len(anglein) == 3  and anglein[1] != 0 and anglein[2] != 0:
 			angleList.append(anglein)
-			wait()
 		elif len(anglein) != 3:
 			print('this is formatted wrongly')
 			wait()
@@ -41,7 +40,7 @@ def inputAngles():
 
 def pickfile(opt):
 	clr()
-	print("Filename")
+	print("Filename?")
 	NameOfFile = input()
 	if opt == 1:
 		return open(NameOfFile, "rb")
