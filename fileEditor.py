@@ -5,20 +5,20 @@ def clr():
 	os.system('clear') #you'll need to change  this if you're on windows
 
 def wait():
-	input("\033[36m Press  enter to continue""\033[0m")
+	input("\033[36mPress  enter to continue""\033[0m")
 
 print('This is a thing for creating and editing files containing lots of  "shapes."')
 
 def inputAngles():
-	print("\033[4m","\033[1m",'shapes are lists of angles, and each angle should be a space delimited  list of the form:',"\033[0m")
-	print('numerator denominator multiplicity')
+	print("\033[4m","\033[1m",'Shapes are lists of angles, and each angle should be a space delimited  list of the form:',"\033[0m")
+	print(' numerator denominator multiplicity')
 	angleList = []
 	anglein = []
 	wait()
 	while  anglein != [0,0,0]:
 		os.system('clear')
 		print(" "'0,0,0 ends')
-		print("\033[4m",'current shape:', angleList,"\033[0m")
+		print("\033[4m ",'current shape:', angleList,"\033[0m")
 		anglestring = input()
 		anglein = list(map(int,anglestring.split()))
 		if len(anglein) == 3  and anglein[1] != 0 and anglein[2] != 0:
@@ -46,7 +46,7 @@ def pickfile(opt):
 	if opt == 1:
 		return open(NameOfFile, "rb")
 	elif opt == 2:
-		return NameOfFile
+		return str(NameOfFile)
 	elif opt == 3:
 		return open(NameOfFile,"wb")
 
@@ -66,12 +66,12 @@ def read():
 			shapefile = list(pickle.load(WorkingFile))
 			init = 1
 		print("\033[4m","\033[1m","What would you like to do?","\033[0m")
-		print('current file:', current)
+		print(' current file:', current)
 		print('')
-		print("1. Check a specific shape")
-		print("2. Read out the whole file")
-		print("5. Pick a new file") 
-		print("0. Main Menu")
+		print(" 1. Check a specific shape")
+		print(" 2. Read out the whole file")
+		print(" 5. Pick a new file") 
+		print(" 0. Main Menu")
 		nav = input()
 		clr()
 		if int(nav) == 1:
@@ -91,7 +91,7 @@ def read():
 			i=1
 			print("indices	|	Shape Data")
 			for shapes in shapefile:
-				print(i,"	|","	".join(map(str,shapes)))
+				print(" ",i,"	|","	".join(map(str,shapes)))
 				i=i+1
 			wait()
 		elif int(nav)==5:
@@ -118,32 +118,32 @@ def append():
 		clr()
 		current = WorkingFile
 		print("\033[4m","\033[1m","What would you like to do?","\033[0m")
-		print('current file:', current)
+		print(' current file:', current)
 		print('')
-		print("1. Add some shapes to this file")
-		print("2. Check file contents")
-		print("5. pick a new file") 
-		print("0. Main Menu")
+		print(" 1. Add some shapes to this file")
+		print(" 2. Check file contents")
+		print(" 5. pick a new file") 
+		print(" 0. Main Menu")
 		nav = input()
 		clr()
 		if int(nav) == 1:
-			newlines = []	
+			newlines = []
 			while True:
 				clr()
-				print('Press 1 to add a new shape, press 2 to commit changes, press 0 to quit without commit')
-				print('Shapes entered:',newlines)
+				print(' Press 1 to add a new shape, press 2 to commit changes, press 0 to quit without commit')
+				print(' Shapes entered:', newlines)
 				newnav = input()
 				if  int(newnav) == 1:
+					clr()
 					inshape = inputAngles()
+					shapefile.append(inshape)
 					newlines.append(inshape)
 				elif int(newnav) == 2:
-					newshapefile = shapefile.extend(newlines)
 					wfw = open(WorkingFile, "wb")
-					pickle.dump(newshapefile,wfw)
+					pickle.dump(shapefile,wfw)
 					wfw.close()  
 					break
 				elif int(newnav) == 0:
-					
 					break
 				else:
 					clr()
@@ -154,7 +154,7 @@ def append():
 			i=1
 			print("indices	|	Shape Data")
 			for shapes in shapefile:
-				print(i,"	|","	".join(map(str,shapes)))
+				print(" ",i,"	|","	".join(map(str,shapes)))
 				i=i+1
 			wait()
 		elif int(nav)==5:
@@ -162,6 +162,7 @@ def append():
 			WorkingFile = pickfile(2)
 			wait()
 		elif int(nav) == 0:
+			clr()
 			break
 		else:
 			clear()
@@ -176,11 +177,11 @@ def writeNew():
 		clr()
 		current = WorkingFile.name
 		print("\033[4m","\033[1m","What would you like to do?","\033[0m")
-		print('current file:', current)
+		print(' current file:', current)
 		print('')
-		print("1. Write some shapes to this file")
-		print("5. Create a new file") 
-		print("0. Main Menu")
+		print(" 1. Write some shapes to this file")
+		print(" 5. Create a new file") 
+		print(" 0. Main Menu")
 		nav = input()
 		clr()
 		if int(nav) == 1:
@@ -220,12 +221,12 @@ def mainMenu():
 	while True:
 		clr()
 		print("\033[4m","\033[1m","What would you like to do?","\033[0m")
-		print('')
-		print("1. Read")
-		print("2. Append")
-		print("3. Create new")
-		print("4. Instructions")
-		print("0. Quit")
+		print(" 1. Read")
+		print(" 2. Append")
+		print(" 3. Create new")
+		print(" 4. Instructions")
+		print(" 0. Quit")
+		print('___________________________________________')
 		nav = input()
 		clr()
 		if int(nav) == 1:
