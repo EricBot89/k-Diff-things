@@ -84,31 +84,41 @@ def pickfile():
 	NameOfFile = input()
 	return open(NameOfFile, "rb")
 
-def zeroesListBuilder(Zeros)
-	i=len(Zeroes)-1
-	ZeroList = str('({1}^{{2}}').format({Zeros[0][0]},{Zeros[0][1]})
-	while i>0:
-		ZeroList = ZeroList + str(',{1}^{{2}}').format({Zeros[i][0]},{Zeros[i][1]})
-		i = i -1
-		ZeroList = ZeroList + srt(')')
+def zeroesListBuilder(Zeros):
+	i=len(Zeros)
+	j=0
+	ZeroList = '('
+	while j < i:
+		bs = str(Zeros[j][0]) 
+		ex = '{' + str(Zeros[j][1]) + '}'
+		if j > 0 :
+			ZeroList = ZeroList +  ','
+		ZeroList = ZeroList + str('{}^{}').format(bs,ex)
+		j = j+1
+	ZeroList = ZeroList + str(')')
 	return str(ZeroList)
 	
 def  differentialStrata(angleList,opt):
-	if opt == ' k':
-	begining= str("'\'mathcal{{1}}_{{2} }").format({H},{getK(angleList)})
-	kd = getKdiffZeros(angleList)
-	kdStrata = begining + zeroesListBuilder(kd)
-	return kdStrata
+	H = '{H}'
+	K = str(getK(angleList))
+	K = '{' + K + '}'
+	begining = str("\\mathcal{}_{}").format(H, K)
+	if opt == 'k':
+		kd = getKdiffZeros(angleList)
+		kdStrata = begining + zeroesListBuilder(kd)
+		return kdStrata
 	elif opt == 'a':
-	ad = abelianZeros(angleList)
-	adStrata = begining + zeroesListBuilder(ad)
-	return adStrata
-	else
+		ad = abelianZeros(angleList)
+		adStrata = begining + zeroesListBuilder(ad)
+		return adStrata
+	else:
+		return
 
 def TableMaker(shapeFile):
 	header = str('\begin{tabular}{l | c | c| r}', '\n', ',\textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\', '\n', '\hline')
-	currentLine = 
+	table = header
 	table = table + str(' \n \end{tabular}')
+
 
 print('This program takes an input file of formatted shapes and outputs LaTex Code for all the K differential covering info')
 wait()
@@ -142,9 +152,10 @@ def readAndEncode():
 				print('')
 				print(shapefile[line-1])
 				print("")
-				print("k-diff strata:", differentialStrata(shapefile[line-1],'k')
-				print("stratum of the cover:", differentialStrata(shapefile[line-1],'a')
+				print("k-diff strata:", differentialStrata(shapefile[line-1],'k'))
+				print("stratum of the cover:", differentialStrata(shapefile[line-1],'a'))
 				print('')
+				wait()
 			else:
 				print('invalid index')
 				wait()
