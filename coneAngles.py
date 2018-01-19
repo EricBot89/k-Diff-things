@@ -1,8 +1,8 @@
 import math
 import functools
 import os
-import time
 import pickle
+import time
 
 def clr():
 	os.system('clear') #you'll need to change  this if you're on windows
@@ -77,7 +77,7 @@ def abelianZeros(angleList):
 	return listBoxerUpperThingy(orders, mults)
 
 def genusFinder(angleList):
-	return functools.reduce(multiLcm,abelianZeros(angleList))
+	return  (sum(abelianZeros(angleList))) // 2
 
 def inputAngles():
 	print("\033[4m","\033[1m",'Shapes are lists of angles, and each angle should be a space delimited list',"\033[0m")

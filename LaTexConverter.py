@@ -2,15 +2,58 @@
 import math
 import functools
 import os
-import time
 import pickle
+import time
 
 def clr():
 	os.system('clear') #you'll need to change  this if you're on windows
 
 def wait():
 	print("")
-	input("\033[36mPress enter to continue""\033[0m")
+	input("\033[36m Press enter to continue""\033[0m")
+
+def lcm(x,y):
+	return ((x*y)//math.gcd(x,y))
+
+def multiLcm(*args):
+	return functools.reduce(lcm,args)
+
+def getNums(angleList):
+	return [angleList[i][0] for i in range(len(angleList))] 
+
+def getDenoms(angleList):
+	return [angleList[i][1] for i in range(len(angleList))]
+
+def getMults(angleList):
+	return [angleList[i][2] for i in range(len(angleList))]
+
+def makeAnglesEven(angle):
+	if angle[0]%2 == 1:
+		return [angle[0]*2,angle[1]*2,angle[2]]
+	else:
+		return angle
+
+def getEvenAngles(angleList):
+	return list(map(makeAnglesEven,angleList))
+	
+def getK(angleList):
+	ea = getEvenAngles(angleList)
+	eaD = getDenoms(ea)
+	if len(angleList ) == 1:
+		return multiLcm(eaD)[0]
+	else:
+		return multiLcm(eaD)[1]
+
+def getAnglesInTermsOfK (angleList):
+	k = getK(angleList)
+	return [[(angleList[i][j]*k)//angleList[i][1] for j in range(3)] for i in range(len(angleList))] 
+	
+def clr():
+	os.system('clear') #you'll need to change  this if you're on windows
+
+def wait():
+	print("")
+	input("\033[36m Press enter to continue""\033[0m")
 
 def lcm(x,y):
 	return ((x*y)//math.gcd(x,y))
@@ -51,6 +94,11 @@ def getAnglesInTermsOfK (angleList):
 def ordersandmults(orders,mults):
 	return [[orders[i],mults[i]] for i in range(len(orders))]
 
+def listBoxerUpperThingy(orders,mults):
+	step1 = [[orders[i] for j in range(mults[i])] for i in range(len(orders))]
+	step2 = [ item for sublist in step1 for item in sublist]
+	return step2
+
 def getDeficFromTwoPi(angleList):
 	k = getK(angleList)
 	kAngles = getAnglesInTermsOfK(angleList)
@@ -59,7 +107,7 @@ def getDeficFromTwoPi(angleList):
 def getKdiffZeros(angleList):
 	orders = getDeficFromTwoPi(angleList)
 	mults = getMults(angleList)
-	return ordersandmults(orders,mults)
+	return listBoxerUpperThingy(orders,mults)
 
 def abealianOrders(angleList):
 		ea = getEvenAngles(angleList)
@@ -73,16 +121,20 @@ def abelianMult(angleList):
 def abelianZeros(angleList):
 	orders = abealianOrders(angleList)
 	mults = abelianMult(angleList)
-	return ordersandmults(orders, mults)
+	return listBoxerUpperThingy(orders, mults)
 
 def genusFinder(angleList):
-	return functools.reduce(multiLcm,abelianZeros(angleList))
+	return  (sum(abelianZeros(angleList))) // 2
 
-def pickfile():
-	clr()
-	print("Filename?")
-	NameOfFile = input()
-	return open(NameOfFile, "rb")
+def getKdiffZerosForLtx(angleList):
+	orders = getDeficFromTwoPi(angleList)
+	mults = getMults(angleList)
+	return ordersandmults(orders,mults)
+
+def abelianZerosForLtx(angleList):
+	orders = abealianOrders(angleList)
+	mults = abelianMult(angleList)
+	return ordersandmults(orders, mults)
 
 def zeroesListBuilder(Zeros):
 	i=len(Zeros)
@@ -104,11 +156,11 @@ def  differentialStrata(angleList,opt):
 	K = '{' + K + '}'
 	begining = str("\\mathcal{}_{}").format(H, K)
 	if opt == 'k':
-		kd = getKdiffZeros(angleList)
+		kd = getKdiffZerosForLtx(angleList)
 		kdStrata = begining + zeroesListBuilder(kd)
 		return kdStrata
 	elif opt == 'a':
-		ad = abelianZeros(angleList)
+		ad = abelianZerosForLtx(angleList)
 		adStrata = begining + zeroesListBuilder(ad)
 		return adStrata
 	else:
@@ -126,10 +178,11 @@ def TableMaker(shapefile):
 #	outFile.write(table)
 	print(table)
 
-
-
-print('This program takes an input file of formatted shapes and outputs LaTex Code for all the K differential covering info')
-wait()
+def pickfile():
+	clr()
+	print("Filename?")
+	NameOfFile = input()
+	return open(NameOfFile, "rb")
 
 def readAndEncode():
 	WorkingFile = pickfile()
@@ -192,5 +245,7 @@ def readAndEncode():
 			clear()
 			print('what?')
 			wait()
-			
+clr()			
+print('This program takes an input file of formatted shapes and outputs LaTex Code for all the K differential covering info')
+wait()
 readAndEncode()
