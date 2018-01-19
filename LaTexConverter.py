@@ -10,7 +10,7 @@ def clr():
 
 def wait():
 	print("")
-	input("\033[36m Press enter to continue""\033[0m")
+	input("\033[36mPress enter to continue""\033[0m")
 
 def lcm(x,y):
 	return ((x*y)//math.gcd(x,y))
@@ -114,10 +114,18 @@ def  differentialStrata(angleList,opt):
 	else:
 		return
 
-def TableMaker(shapeFile):
-	header = str('\begin{tabular}{l | c | c| r}', '\n', ',\textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\', '\n', '\hline')
+def TableMaker(shapefile):
+	header = '\\begin{tabular}{l | c | c| r}' + '\n'  + '\\textbf{Polyheron} & \\textbf{Stratum of k-differential} &  \\textbf{Stratum of Covering} & \\textbf{Genus} \\\ ' + '\n' +'\\hline' +'\n'
 	table = header
-	table = table + str(' \n \end{tabular}')
+	i = 1
+	while i <= len(shapefile):
+		table = table +  str(i) + ' &' + differentialStrata(shapefile[i-1],'k') + ' &'  + differentialStrata(shapefile[i-1],'a') + ' &' + str(genusFinder(shapefile[i-1])) + ' \\\ ' + '\n'		
+		i = i+1
+	table = table + str(' \n\end{tabular}')
+#	outFile = open('LaTexOutput','x')
+#	outFile.write(table)
+	print(table)
+
 
 
 print('This program takes an input file of formatted shapes and outputs LaTex Code for all the K differential covering info')
@@ -168,7 +176,8 @@ def readAndEncode():
 				i=i+1
 			wait()
 		elif int(nav) == 3:
-			TableMaker(shapeFile)
+			clr()
+			TableMaker(shapefile)
 			wait()
 		elif int(nav)==5:
 			clr()
