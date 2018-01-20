@@ -1,13 +1,13 @@
 \documentclass[12pt]{article}
 \title{Tables of k-Differential Strata}
-\author{Eric Loucks}
+\author{}
 \usepackage[landscape]{geometry}
 
-\begin{document}
-\maketitle
-
-\textbf{Platonic Solids}
-\\
+\begin{document}\
+\begin{center}
+\section*{Platonic Solids}
+\end{center}
+\
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
@@ -23,12 +23,11 @@ Icosahedron:
  & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}_{6}(4^{12})$ &25 \\ 
  
 \end{tabular}
-\\
 \pagebreak
-\\
-\textbf{Archemedian Solids}
-\\
-\\
+\begin{center}
+\section*{Platonic Solids}
+\end{center}
+\
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
@@ -60,12 +59,13 @@ Snub Dodecahedron:
  & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}_{30}(28^{60})$ &841 \\ 
  
 \end{tabular}
-\\
 \pagebreak
-\\
-\textbf{Johnson Solids}
-\\
-\\
+\
+\begin{center}
+\section*{Johnson Solids}
+\end{center}
+\
+\
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
@@ -93,6 +93,5 @@ Snub Dodecahedron:
 21 & $\mathcal{H}_{12}(-2^{3},-1^{6},-2^{6})$ & $\mathcal{H}_{12}(4^{6},10^{6},4^{12})$ &67 \\ 
 22 & $\mathcal{H}_{24}(-3^{8},2^{8},-2^{4})$ & $\mathcal{H}_{24}(6^{24},12^{16},10^{8})$ &209 \\ 
 23 & $\mathcal{H}_{60}(-2^{5},-5^{10},-6^{10})$ & $\mathcal{H}_{60}(28^{10},10^{50},8^{60})$ &631 \\ 
- 
 \end{tabular}
 \end{document} 
