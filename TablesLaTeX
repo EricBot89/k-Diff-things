@@ -1,9 +1,11 @@
 \documentclass[12pt]{article}
 \title{Tables of k-Differential Strata}
 \author{Eric Loucks}
+\usepackage[landscape]{geometry}
 
 \begin{document}
 \maketitle
+
 \textbf{Platonic Solids}
 \\
 \begin{tabular}{l | c | c| r}
@@ -22,7 +24,7 @@ Icosahedron:
  
 \end{tabular}
 \\
-\\
+\pagebreak
 \\
 \textbf{Archemedian Solids}
 \\
@@ -59,8 +61,11 @@ Snub Dodecahedron:
  
 \end{tabular}
 \\
+\pagebreak
 \\
 \textbf{Johnson Solids}
+\\
+\\
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
