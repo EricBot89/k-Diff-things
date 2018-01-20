@@ -6,17 +6,17 @@ import pickle
 import time
 
 def clr():
-	os.system('clear') #you'll need to change  this if you're on windows
+	os.system('clear') #you'll need to change this if you're on windows
 
 def wait():
 	print("")
-	input("\033[36m Press enter to continue""\033[0m")
+	input("\033[36mPress enter to continue""\033[0m")
 
 def lcm(x,y):
 	return ((x*y)//math.gcd(x,y))
 
-def multiLcm(*args):
-	return functools.reduce(lcm,args)
+def multiLcm(angleList):
+	return functools.reduce(lcm,angleList)
 
 def getNums(angleList):
 	return [angleList[i][0] for i in range(len(angleList))] 
@@ -38,66 +38,16 @@ def getEvenAngles(angleList):
 	
 def getK(angleList):
 	ea = getEvenAngles(angleList)
-	eaD = getDenoms(ea)
-	if len(angleList ) == 1:
-		return multiLcm(eaD)[0]
-	else:
-		return multiLcm(eaD)[1]
-
-def getAnglesInTermsOfK (angleList):
-	k = getK(angleList)
-	return [[(angleList[i][j]*k)//angleList[i][1] for j in range(3)] for i in range(len(angleList))] 
+	denoms = getDenoms(ea)
+	return multiLcm(denoms)
 	
-def clr():
-	os.system('clear') #you'll need to change  this if you're on windows
-
-def wait():
-	print("")
-	input("\033[36m Press enter to continue""\033[0m")
-
-def lcm(x,y):
-	return ((x*y)//math.gcd(x,y))
-
-def multiLcm(*args):
-	return functools.reduce(lcm,args)
-
-def getNums(angleList):
-	return [angleList[i][0] for i in range(len(angleList))] 
-
-def getDenoms(angleList):
-	return [angleList[i][1] for i in range(len(angleList))]
-
-def getMults(angleList):
-	return [angleList[i][2] for i in range(len(angleList))]
-
-def makeAnglesEven(angle):
-	if angle[0]%2 == 1:
-		return [angle[0]*2,angle[1]*2,angle[2]]
-	else:
-		return angle
-
-def getEvenAngles(angleList):
-	return list(map(makeAnglesEven,angleList))
-	
-def getK(angleList):
-	ea = getEvenAngles(angleList)
-	eaD = getDenoms(ea)
-	if len(angleList ) == 1:
-		return multiLcm(eaD)[0]
-	else:
-		return multiLcm(eaD)[1]
-
-def getAnglesInTermsOfK (angleList):
+def getAnglesInTermsOfK(angleList):
 	k = getK(angleList)
-	return [[(angleList[i][j]*k)//angleList[i][1] for j in range(3)] for i in range(len(angleList))] 
-
-def ordersandmults(orders,mults):
-	return [[orders[i],mults[i]] for i in range(len(orders))]
+	return [[(angleList[i][j]*k)//angleList[i][1] for j in range(0,2)] for i in range(len(angleList))] 
 
 def listBoxerUpperThingy(orders,mults):
-	step1 = [[orders[i] for j in range(mults[i])] for i in range(len(orders))]
-	step2 = [ item for sublist in step1 for item in sublist]
-	return step2
+	toplist = [[orders[i] for j in range(mults[i])] for i in range(len(orders))]
+	return [ item for sublist in toplist for item in sublist]
 
 def getDeficFromTwoPi(angleList):
 	k = getK(angleList)
@@ -105,7 +55,7 @@ def getDeficFromTwoPi(angleList):
 	return [kAngles[i][0]-2*k for i in range(len(angleList))]
 
 def getKdiffZeros(angleList):
-	orders = getDeficFromTwoPi(angleList)
+	orders = list(map(lambda x: x//2,getDeficFromTwoPi(angleList)))
 	mults = getMults(angleList)
 	return listBoxerUpperThingy(orders,mults)
 
@@ -120,22 +70,29 @@ def abelianMult(angleList):
 
 def abelianZeros(angleList):
 	orders = abealianOrders(angleList)
-	mults = abelianMult(angleList)
+	mults = [abelianMult(angleList)[i]*getMults(angleList)[i] for i in range(len(angleList))]
 	return listBoxerUpperThingy(orders, mults)
 
 def genusFinder(angleList):
-	return  (sum(abelianZeros(angleList))) // 2
-
+	orders = abealianOrders(angleList)
+	mults1 = abelianMult(angleList)
+	mults2 = getMults(angleList)
+	subtotal = [mults1[i]*mults2[i]*orders[i] for i in range(len(angleList))]
+	return (sum(subtotal)+2)//2
+	
 def getKdiffZerosForLtx(angleList):
-	orders = getDeficFromTwoPi(angleList)
+	orders = list(map(lambda x: x//2,getDeficFromTwoPi(angleList)))
 	mults = getMults(angleList)
 	return ordersandmults(orders,mults)
 
 def abelianZerosForLtx(angleList):
 	orders = abealianOrders(angleList)
-	mults = abelianMult(angleList)
+	mults = [abelianMult(angleList)[i]*getMults(angleList)[i] for i in range(len(angleList))]
 	return ordersandmults(orders, mults)
-
+	
+def ordersandmults(orders,mults):
+	return [[orders[i],mults[i]] for i in range(len(orders))]
+	
 def zeroesListBuilder(Zeros):
 	i=len(Zeros)
 	j=0

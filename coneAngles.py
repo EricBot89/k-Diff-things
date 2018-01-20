@@ -5,7 +5,7 @@ import pickle
 import time
 
 def clr():
-	os.system('clear') #you'll need to change  this if you're on windows
+	os.system('clear') #you'll need to change this if you're on windows
 
 def wait():
 	print("")
@@ -40,14 +40,13 @@ def getK(angleList):
 	denoms = getDenoms(ea)
 	return multiLcm(denoms)
 	
-def getAnglesInTermsOfK (angleList):
+def getAnglesInTermsOfK(angleList):
 	k = getK(angleList)
 	return [[(angleList[i][j]*k)//angleList[i][1] for j in range(0,2)] for i in range(len(angleList))] 
 
 def listBoxerUpperThingy(orders,mults):
-	step1 = [[orders[i] for j in range(mults[i])] for i in range(len(orders))]
-	step2 = [ item for sublist in step1 for item in sublist]
-	return step2
+	toplist = [[orders[i] for j in range(mults[i])] for i in range(len(orders))]
+	return [ item for sublist in toplist for item in sublist]
 
 def getDeficFromTwoPi(angleList):
 	k = getK(angleList)
@@ -70,7 +69,7 @@ def abelianMult(angleList):
 
 def abelianZeros(angleList):
 	orders = abealianOrders(angleList)
-	mults = abelianMult(angleList)
+	mults = [abelianMult(angleList)[i]*getMults(angleList)[i] for i in range(len(angleList))]
 	return listBoxerUpperThingy(orders, mults)
 
 def genusFinder(angleList):
@@ -175,7 +174,6 @@ def read():
 			for calcs in AlltheCalcs:
 				print(" ",i,"	|","	".join(map(str,calcs)))
 				i=i+1
-			
 			wait()
 		elif int(nav)==5:
 			clr()
