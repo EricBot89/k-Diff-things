@@ -123,18 +123,18 @@ def  differentialStrata(angleList,opt):
 	else:
 		return
 
-def TableMaker(shapefile):
+def TableMaker(shapefile,namelist):
 	header = '\\begin{tabular}{l | c | c| r}' + '\n'  + '\\textbf{Polyheron} & \\textbf{Stratum of k-differential} &  \\textbf{Stratum of Covering} & \\textbf{Genus} \\\ ' + '\n' +'\\hline' +'\n'
 	table = header
 	i = 1
 	while i <= len(shapefile):
-		table = table +  str(i) + ' &' + differentialStrata(shapefile[i-1],'k') + ' &'  + differentialStrata(shapefile[i-1],'a') + ' &' + str(genusFinder(shapefile[i-1])) + ' \\\ ' + '\n'		
+		table = table +  namelist[0][i-1] + ' & $' + differentialStrata(shapefile[i-1],'k') + '$ & $'  + differentialStrata(shapefile[i-1],'a') + '$ &' + str(genusFinder(shapefile[i-1])) + ' \\\ ' + '\n'		
 		i = i+1
 	table = table + str(' \n\end{tabular}')
-	outFile = open('LaTexOutput','x')
+	outFile = open('LaTexOutput','w')
 	outFile.write(table)
 	print(table)
-
+\
 def pickfile():
 	clr()
 	print("Filename?")
@@ -145,11 +145,33 @@ def readAndEncode():
 	WorkingFile = pickfile()
 	clr()
 	init = 0
+	check =0
+	try:
+		nameFile = str(WorkingFile.name) + 'Names'
+		nameList = open(nameFile, 'r')
+	except:
+		print("no name file found!")
+		print("continue without names?   (Y/N)")
+		opt = input()
+		if opt == 'Y' or 'y':
+			try:
+				nameList = open(DummyNames, 'r')
+			except:
+				check = 1
+		elif opt == 'N' or 'n"':
+			wait()
+			return True
+		else:
+			return False
 	while True:
 		clr()
 		current = WorkingFile.name
 		if init == 0:
 			shapefile = list(pickle.load(WorkingFile))
+			if check == 0:
+				namelist = [nameList.readlines(i) for i in range(len(shapefile))]
+			else:
+				namelist = [["J" + str(i) for i in range(200)],0]
 			init = 1
 		print("\033[4m","\033[1m","What would you like to do?","\033[0m")
 		print(' current file:', current)
@@ -166,7 +188,7 @@ def readAndEncode():
 			line = int(input())
 			clr()
 			if  line <= (len(shapefile)) and  line > 0:
-				print("shape", line, ":")
+				print("shape", line, ":", nameList.realines(line)[0])
 				print('')
 				print(shapefile[line-1])
 				print("")
@@ -182,12 +204,12 @@ def readAndEncode():
 			i=1
 			print("indices	|	Shape Data")
 			for shapes in shapefile:
-				print(" ",i,"	|","	".join(map(str,shapes)))
+				print(" ", nameList.realines(i)[0],"	|","	".join(map(str,shapes)))
 				i=i+1
 			wait()
 		elif int(nav) == 3:
 			clr()
-			TableMaker(shapefile)
+			TableMaker(shapefile,namelist)
 			wait()
 		elif int(nav)==5:
 			clr()
@@ -201,7 +223,8 @@ def readAndEncode():
 		else:
 			clear()
 			print('what?')
-			wait()
+			wait()	
+			
 clr()			
 print('This program takes an input file of formatted shapes and outputs LaTex Code for all the K differential covering info')
 wait()
