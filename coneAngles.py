@@ -2,7 +2,6 @@ import math
 import functools
 import os
 import pickle
-import time
 
 def clr():
 	os.system('clear') #you'll need to change this if you're on windows
@@ -45,8 +44,7 @@ def getAnglesInTermsOfK(angleList):
 	return [[(angleList[i][j]*k)//angleList[i][1] for j in range(0,2)] for i in range(len(angleList))] 
 
 def listBoxerUpperThingy(orders,mults):
-	toplist = [[orders[i] for j in range(mults[i])] for i in range(len(orders))]
-	return [ item for sublist in toplist for item in sublist]
+	return [[orders[i],mults[i]] for i in range(len(orders))]
 
 def getDeficFromTwoPi(angleList):
 	k = getK(angleList)
@@ -164,15 +162,14 @@ def read():
 			i=1
 			print("indices	|	Shape Data")
 			for shapes in shapefile:
-				print(" ",i,"	|","	".join(map(str,shapes)))
+				print(" ",i,"	|","	".join(map(str,shapes)), '\n')
 				i=i+1
 			wait()
 		elif int(nav) == 3:
 			AlltheCalcs = list(map(doeverything,shapefile))
 			i=1
-			print
 			for calcs in AlltheCalcs:
-				print(" ",i,"	|","	".join(map(str,calcs)))
+				print(" ",i,":", '\n',calcs)
 				i=i+1
 			wait()
 		elif int(nav)==5:
@@ -189,23 +186,19 @@ def read():
 			print('what?')
 			wait()
 
-def doeverything(angleList):
-	everything = []
-	kay = ["K="] 
-	kay.append(getK(polygonAngles))
-	everything.append(kay)
-	kdiff = ["Zeroes of K differential = "]
-	kdiff.extend(getKdiffZeros(polygonAngles))
-	everything.append(kdiff)
-	adiff = ["Zeroes of the cover = "]
-	adiff.extend(abelianZeros(polygonAngles))
-	everything.append(adiff)
-	genus = ["Genus of the cover = "]
-	genus.append(genusFinder(polygonAngles))
-	everything.append(genus)
-	return everything
-
-
+def doeverything(polygonAngles):
+	rundown = "	K=" 
+	rundown = rundown + str(getK(polygonAngles)) + '\n'
+	rundown = rundown + "	Zeroes of K differential = "
+	rundown = rundown + str((getKdiffZeros(polygonAngles))) + '\n'
+	rundown = rundown + "	Zeroes of the cover = "
+	rundown = rundown + str((abelianZeros(polygonAngles))) + '\n'
+	rundown = rundown + "	Genus of the cover = " 
+	rundown = rundown + str((genusFinder(polygonAngles))) + '\n' + '\n'
+	rundown = rundown + '------------------------------------------------------------'
+	rundown = rundown + '\n'
+	return rundown
+	
 clr()
 opts = {}
 opts[1] = 'Enter a new  shape'
@@ -219,9 +212,7 @@ opts[8] = 'Print the shape currently in memory'
 opts[9] = 'Hi'
 opts[0] = 'Quit'
 print("\033[4m","\033[1m", 'This is the Cone Angle Calculator',"\033[0m")
-time.sleep(1)
 print(" ",'Use number keys to select menu options')
-time.sleep(1)
 polygonAngles = [[1,1,1]]
 while True:
 		for entry in opts:
@@ -233,7 +224,7 @@ while True:
 			break
 		elif int(nav) == 2:
 			clr()
-			print('\n'.join(map(str,doeverything(polygonAngles))))
+			print(doeverything(polygonAngles))
 			wait()
 			clr()
 		elif int(nav) == 1:

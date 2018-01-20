@@ -131,8 +131,8 @@ def TableMaker(shapefile):
 		table = table +  str(i) + ' &' + differentialStrata(shapefile[i-1],'k') + ' &'  + differentialStrata(shapefile[i-1],'a') + ' &' + str(genusFinder(shapefile[i-1])) + ' \\\ ' + '\n'		
 		i = i+1
 	table = table + str(' \n\end{tabular}')
-#	outFile = open('LaTexOutput','x')
-#	outFile.write(table)
+	outFile = open('LaTexOutput','x')
+	outFile.write(table)
 	print(table)
 
 def pickfile():
