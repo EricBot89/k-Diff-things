@@ -9,13 +9,13 @@ def clr():
 
 def wait():
 	print("")
-	input("\033[36m Press enter to continue""\033[0m")
+	input("\033[36mPress enter to continue""\033[0m")
 
 def lcm(x,y):
 	return ((x*y)//math.gcd(x,y))
 
-def multiLcm(*args):
-	return functools.reduce(lcm,args)
+def multiLcm(angleList):
+	return functools.reduce(lcm,angleList)
 
 def getNums(angleList):
 	return [angleList[i][0] for i in range(len(angleList))] 
@@ -37,15 +37,12 @@ def getEvenAngles(angleList):
 	
 def getK(angleList):
 	ea = getEvenAngles(angleList)
-	eaD = getDenoms(ea)
-	if len(angleList ) == 1:
-		return multiLcm(eaD)[0]
-	else:
-		return multiLcm(eaD)[1]
-
+	denoms = getDenoms(ea)
+	return multiLcm(denoms)
+	
 def getAnglesInTermsOfK (angleList):
 	k = getK(angleList)
-	return [[(angleList[i][j]*k)//angleList[i][1] for j in range(3)] for i in range(len(angleList))] 
+	return [[(angleList[i][j]*k)//angleList[i][1] for j in range(0,2)] for i in range(len(angleList))] 
 
 def listBoxerUpperThingy(orders,mults):
 	step1 = [[orders[i] for j in range(mults[i])] for i in range(len(orders))]
@@ -58,7 +55,7 @@ def getDeficFromTwoPi(angleList):
 	return [kAngles[i][0]-2*k for i in range(len(angleList))]
 
 def getKdiffZeros(angleList):
-	orders = getDeficFromTwoPi(angleList)
+	orders = list(map(lambda x: x//2,getDeficFromTwoPi(angleList)))
 	mults = getMults(angleList)
 	return listBoxerUpperThingy(orders,mults)
 
@@ -77,7 +74,11 @@ def abelianZeros(angleList):
 	return listBoxerUpperThingy(orders, mults)
 
 def genusFinder(angleList):
-	return  (sum(abelianZeros(angleList))) // 2
+	orders = abealianOrders(angleList)
+	mults1 = abelianMult(angleList)
+	mults2 = getMults(angleList)
+	subtotal = [mults1[i]*mults2[i]*orders[i] for i in range(len(angleList))]
+	return (sum(subtotal)+2)//2
 
 def inputAngles():
 	print("\033[4m","\033[1m",'Shapes are lists of angles, and each angle should be a space delimited list',"\033[0m")
@@ -186,7 +187,7 @@ def read():
 			WorkingFile.close()
 			break
 		else:
-			clear()
+			clr()
 			print('what?')
 			wait()
 
