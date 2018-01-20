@@ -123,68 +123,123 @@ def read():
 	WorkingFile = pickfile()
 	clr()
 	init = 0
-	while True:
-		clr()
-		current = WorkingFile.name
-		if init == 0:
-			shapefile = list(pickle.load(WorkingFile))
-			init = 1
-		print("\033[4m","\033[1m","What would you like to do?","\033[0m")
-		print(' current file:', current)
-		print(" 1. Read out the whole file")
-		print(" 2. Pick a specific shape by index")
-		print(" 3. Get everything for every entry in file")
-		print(" 5. Pick a new file") 
-		print(" 0. Main Menu")
-		print("")
-		nav = input()
-		clr()
-		if int(nav) == 2:
-			print("shape?")
-			line = int(input())
+	try:
+		nameFile = str(WorkingFile.name) + 'Names'
+		nameList = open(nameFile, 'r')
+		while True:
 			clr()
-			if  line <= (len(shapefile)) and  line > 0:
-				print("shape", line, ":")
-				print('')
-				print(shapefile[line-1])
-				print("")
-				Y = input("Use this shape in calc? (1 or Y/N)")
-				if Y == 'Y' or '1':
-					return shapefile[line-1]
+			current = WorkingFile.name
+			if init == 0:
+				shapefile = list(pickle.load(WorkingFile))
+				init = 1
+			print("\033[4m","\033[1m","What would you like to do?","\033[0m")
+			print(' current file:', current)
+			print(" 1. Read out the whole file")
+			print(" 2. Pick a specific shape by index")
+			print(" 3. Get everything for every entry in file")
+			print(" 0. Main Menu")
+			print("")
+			nav = input()
+			clr()
+			if int(nav) == 2:
+				print("shape?")
+				line = int(input())
+				clr()
+				if  line <= (len(shapefile)) and  line > 0:
+					print("shape", line, ":", nameList.realines(line)[0])
+					print('')
+					print(shapefile[line-1])
+					print("")
+					Y = input("Use this shape in calc? (1 or Y/N)")
+					if Y == 'Y' or '1':
+						return shapefile[line-1]
+					else:
+						clr()
+						wait()
 				else:
-					clr()
+					print('invalid index')
 					wait()
-			else:
-				print('invalid index')
+			elif int(nav) == 1:
+				clr()
+				i=1
+				print("indices	|	Shape Data")
+				for shapes in shapefile:
+					print(" ", nameList.readlines(i)[0],"	".join(map(str,shapes)), '\n')
+					i=i+1
 				wait()
-		elif int(nav) == 1:
+			elif int(nav) == 3:
+				AlltheCalcs = list(map(doeverything,shapefile))
+				i=1
+				for calcs in AlltheCalcs:
+					print(" ", nameList.readlines(i)[0],calcs)
+					i=i+1
+				wait()
+				wait()
+			elif int(nav) == 0:
+				namelist.close()
+				WorkingFile.close()
+				return [[1,1,4]]
+			else:
+				clr()
+				print('what?')
+				wait()
+
+	except:
+		while True:
 			clr()
-			i=1
-			print("indices	|	Shape Data")
-			for shapes in shapefile:
-				print(" ",i,"	|","	".join(map(str,shapes)), '\n')
-				i=i+1
-			wait()
-		elif int(nav) == 3:
-			AlltheCalcs = list(map(doeverything,shapefile))
-			i=1
-			for calcs in AlltheCalcs:
-				print(" ",i,":", '\n',calcs)
-				i=i+1
-			wait()
-		elif int(nav)==5:
+			current = WorkingFile.name
+			if init == 0:
+				shapefile = list(pickle.load(WorkingFile))
+				init = 1
+			print("\033[4m","\033[1m","What would you like to do?","\033[0m")
+			print(' current file:', current)
+			print(" 1. Read out the whole file")
+			print(" 2. Pick a specific shape by index")
+			print(" 3. Get everything for every entry in file")
+			print(" 0. Main Menu")
+			print("")
+			nav = input()
 			clr()
-			WorkingFile.close()
-			WorkingFile = pickfile(1)
-			init = 0
-			wait()
-		elif int(nav) == 0:
-			WorkingFile.close()
-			break
-		else:
-			clr()
-			print('what?')
-			wait()
+			if int(nav) == 2:
+				print("shape?")
+				line = int(input())
+				clr()
+				if  line <= (len(shapefile)) and  line > 0:
+					print("shape", line, ":")
+					print('')
+					print(shapefile[line-1])
+					print("")
+					Y = input("Use this shape in calc? (1 or Y/N)")
+					if Y == 'Y' or '1':
+						return shapefile[line-1]
+					else:
+						clr()
+						wait()
+				else:
+					print('invalid index')
+					wait()
+			elif int(nav) == 1:
+				clr()
+				i=1
+				print("indices	|	Shape Data")
+				for shapes in shapefile:
+					print(" ",i,"	|","	".join(map(str,shapes)), '\n')
+					i=i+1
+				wait()
+			elif int(nav) == 3:
+				AlltheCalcs = list(map(doeverything,shapefile))
+				i=1
+				for calcs in AlltheCalcs:
+					print(" ",i,":", '\n',calcs)
+					i=i+1
+				wait()
+			elif int(nav) == 0:
+				WorkingFile.close()
+				return [[1,1,4]]
+			else:
+				clr()
+				print('what?')
+				wait()
 
 def doeverything(polygonAngles):
 	rundown = "	K=" 

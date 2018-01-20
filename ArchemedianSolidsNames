@@ -1,13 +1,13 @@
-1 truncated tetrahedron,
-2 cuboctahedron
-3 truncated cube
-4 truncated octahedron
-5 rhombicuboctahedron
-6 truncated cuboctahedron
-7 snub cube
-8 icosidodecahedron
-9 truncated dodecahedron
-10 truncated icosahedron
-11 rhombicosidodecahedron
-12 truncated icosidodecahedron
-13 snub dodecahedron
+Truncated_tetrahedron:
+Cuboctahedron:
+Truncated_Cube:
+Truncated_Octahedron:
+Rhombicuboctahedron:
+Truncated_cuboctahedron:
+Snub_Cube:
+Icosidodecahedron:
+Truncated_dodecahedron:
+Truncated_Icosahedron:
+Rhombicosidodecahedron:
+Truncated_Icosidodecahedron:
+Snub_Dodecahedron:
