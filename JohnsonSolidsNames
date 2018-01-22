@@ -1,32 +1,92 @@
-Square Pyramid
-Pentagonal Pyramid
-Triangular Cupola
-Square Cupola
-Pentagonal Cupola
-Pentagonal Rotunda
-Elongated Triangular Pyramid
-Elongated Square Pyramid
-Elongated Pentagonal Pyramid
-Gyroelongated Square Pyramid
-Gyroelongated Pentagonal Pyramid
-Triangular Bipyramid
-Pentagonal Bipyramid
-Elongated Triangular Bipyramid
-Elongated Square Bipyramid
-Elongated Penagonal Bipyramid
-Gyroelongated Square Bipyramid
-Elongated Triangular Cupola
-Elongated Square Cupola
-Elongated Pentagonal Cupola
-Elongated Pentagonal Rotunda
-Gyroelongated Triagular Cupola
-Gyroelongated Square Cupola
-Gyroelongated Pentagonal Cupola
-Gyroelongated Penagonal Rotunda
-Gyrobifastigium
-Triangular Orthobicupola
-Square Orthobicupola
-Square Gyrobicupola
-Pentagonal Orthobicupola
-Pentagonal Gyrobicupola
-
+1. Square pyramid
+2. Pentagonal pyramid
+3. Triangular cupola
+4. Square cupola
+5. Pentagonal cupola
+6. Pentagonal rotunda
+7. Elongated triangular pyramid
+8. Elongated square pyramid
+9. Elongated pentagonal pyramid
+10. Gyroelongated square pyramid
+11. Gyroelongated pentagonal pyramid
+12. Triangular dipyramid
+13. Pentagonal dipyramid
+14. Elongated triangular dipyramid
+15. Elongated square dipyramid
+16. Elongated pentagonal dipyramid
+17. Gyroelongated square dipyramid
+18. Elongated triangular cupola
+19. Elongated square cupola
+20. Elongated pentagonal cupola
+21. Elongated pentagonal rotunda
+22. Gyroelongated triangular cupola
+23. Gyroelongated square cupola
+24. Gyroelongated pentagonal cupola
+25. Gyroelongated pentagonal rotunda
+26. Gyrobifastigium
+27. Triangular orthobicupola
+28. Square orthobicupola
+29. Square gyrobicupola
+30. Pentagonal orthobicupola
+31. Pentagonal gyrobicupola
+32. Pentagonal orthocupolarotunda
+33. Pentagonal gyrocupolarotunda
+34. Pentagonal orthobirotunda
+35. Elongated triangular orthobicupola
+36. Elongated triangular gyrobicupola
+37. Elongated square gyrobicupola
+38. Elongated pentagonal orthobicupola
+39. Elongated pentagonal gyrobicupola
+40. Elongated pentagonal orthocupolarotunda
+41. Elongated pentagonal gyrocupolarotunda
+42. Elongated pentagonal orthobirotunda
+43. Elongated pentagonal gyrobirotunda
+44. Gyroelongated triangular bicupola
+45. Gyroelongated square bicupola
+46. Gyroelongated pentagonal bicupola
+47. Gyroelongated pentagonal cupolarotunda
+48. Gyroelongated pentagonal birotunda
+49. Augmented triangular prism
+50. Biaugmented triangular prism
+51. Triaugmented triangular prism
+52. Augmented pentagonal prisim
+53. Biaugmented pentagonal prism
+54. Augmented hexagonal prism
+55. Parabiaugmented hexagonal prism
+56. Metabiaugmented hexagonal prism
+57. Triaugmented hexagonal prism
+58. Augmented dodecahedron
+59. Parabiaugmented dodecahedron
+60. Metabiaugmented dodecahedron
+61. Triaugmented dodecahedron
+62. Metabidiminished icosahedron
+63. Tridiminished icosahedron
+64. Augmented tridiminished icosahedron
+65. Augmented truncated tetrahedron
+66. Augmented truncated cube
+67. Biaugmented truncated cube
+68. Augmented truncated dodecahedron
+69. Parabiaugmented truncated dodecahedron
+70. Metabiaugmented truncated dodecahedron
+71. Triaugmented truncated dodecahedron
+72. Gyrate rhombicosidodecahedron
+73. Parabigyrate rhombicosidodecahedron
+74. Metabigyrate rhombicosidodecahedron
+75. Trigyrate rhombicosidodecahedron
+76. Diminished rhombicosidodecahedron
+77. Paragyrate diminished rhombicosidodecahedron
+78. Metagyrate diminished rhombicosidodecahedron
+79. Bigyrate diminished rhombicosidodecahedron
+80. Parabidiminished rhombicosidodecahedron
+81. Metabidiminished rhombicosidodecahedron
+82. Gyrate bidiminished rhombicosidodecahedron
+83. Tridiminished rhombicosidodecahedron
+84. Snub disphenoid
+85. Snub square antiprism
+86. Sphenocorona
+87. Augmented sphenocorona
+88. Sphenomegacorona
+89. Hebesphenomegacorona
+90. Disphenocingulum
+91. Bilunabirotunda
+92. Triangular hebesphenorotunda
