@@ -1,9 +1,11 @@
 \documentclass[12pt]{article}
 \title{Tables of k-Differential Strata for Convex Polygons}
+\date{}
 \author{}
 \usepackage[landscape]{geometry}
 
-\begin{document}\
+\begin{document}
+\maketitle
 \begin{center}
 \section*{Platonic Solids}
 \end{center}
@@ -12,15 +14,15 @@
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
 Tetrahedron
- & $\mathcal{H}_{2}(-1^{4})$ & $\mathcal{H}_{2}(0^{4})$ &1 \\ 
+ & $\mathcal{H}_{2}(-1^{4})$ & $\mathcal{H}(0^{4})$ &1 \\ 
 Cube
- & $\mathcal{H}_{4}(-1^{8})$ & $\mathcal{H}_{4}(2^{8})$ &9 \\ 
+ & $\mathcal{H}_{4}(-1^{8})$ & $\mathcal{H}(2^{8})$ &9 \\ 
 Octahedron
- & $\mathcal{H}_{3}(-1^{6})$ & $\mathcal{H}_{3}(1^{6})$ &4 \\ 
+ & $\mathcal{H}_{3}(-1^{6})$ & $\mathcal{H}(1^{6})$ &4 \\ 
 Dodecahedron
- & $\mathcal{H}_{10}(-1^{20})$ & $\mathcal{H}_{10}(8^{20})$ &81 \\ 
+ & $\mathcal{H}_{10}(-1^{20})$ & $\mathcal{H}(8^{20})$ &81 \\ 
 Icosahedron
- & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}_{6}(4^{12})$ &25 \\ 
+ & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}(4^{12})$ &25 \\ 
  
 \end{tabular}
 \pagebreak
@@ -32,31 +34,31 @@ Icosahedron
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
 Truncated Tetrahedron
- & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}_{6}(4^{12})$ &25 \\ 
+ & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}(4^{12})$ &25 \\ 
 Cuboctahedron
- & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}_{6}(4^{12})$ &25 \\ 
+ & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}(4^{12})$ &25 \\ 
 Truncated Cube
- & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}_{12}(10^{24})$ &121 \\ 
+ & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}(10^{24})$ &121 \\ 
 Truncated Octahedron
- & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}_{12}(10^{24})$ &121 \\ 
+ & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}(10^{24})$ &121 \\ 
 Rhombicuboctahedron
- & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}_{12}(10^{24})$ &121 \\ 
+ & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}(10^{24})$ &121 \\ 
 Truncated Cuboctahedron
- & $\mathcal{H}_{24}(-1^{48})$ & $\mathcal{H}_{24}(22^{48})$ &529 \\ 
+ & $\mathcal{H}_{24}(-1^{48})$ & $\mathcal{H}(22^{48})$ &529 \\ 
 Snub Cube
- & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}_{12}(10^{24})$ &121 \\ 
+ & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}(10^{24})$ &121 \\ 
 Icosidodecahedron
- & $\mathcal{H}_{15}(-1^{30})$ & $\mathcal{H}_{15}(13^{30})$ &196 \\ 
+ & $\mathcal{H}_{15}(-1^{30})$ & $\mathcal{H}(13^{30})$ &196 \\ 
 Truncated Dodecahedron
- & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}_{30}(28^{60})$ &841 \\ 
+ & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}(28^{60})$ &841 \\ 
 Truncated Icosahedron
- & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}_{30}(28^{60})$ &841 \\ 
+ & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}(28^{60})$ &841 \\ 
 Rhombicosidodecahedron
- & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}_{30}(28^{60})$ &841 \\ 
+ & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}(28^{60})$ &841 \\ 
 Truncated Icosidodecahedron
- & $\mathcal{H}_{60}(-1^{120})$ & $\mathcal{H}_{60}(58^{120})$ &3481 \\ 
+ & $\mathcal{H}_{60}(-1^{120})$ & $\mathcal{H}(58^{120})$ &3481 \\ 
 Snub Dodecahedron
- & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}_{30}(28^{60})$ &841 \\ 
+ & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}(28^{60})$ &841 \\ 
  
 \end{tabular}
 \pagebreak
@@ -69,67 +71,106 @@ Snub Dodecahedron
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
 1. Square pyramid
- & $\mathcal{H}_{12}(-4^{1},-5^{4})$ & $\mathcal{H}_{12}(1^{4},6^{4})$ &15 \\ 
+ & $\mathcal{H}_{12}(-4^{1},-5^{4})$ & $\mathcal{H}(1^{4},6^{4})$ &15 \\ 
 2. Pentagonal pyramid
- & $\mathcal{H}_{30}(-5^{1},-11^{5})$ & $\mathcal{H}_{30}(4^{5},18^{5})$ &56 \\ 
+ & $\mathcal{H}_{30}(-5^{1},-11^{5})$ & $\mathcal{H}(4^{5},18^{5})$ &56 \\ 
 3. Triangular cupola
- & $\mathcal{H}_{12}(-2^{3},-3^{6})$ & $\mathcal{H}_{12}(4^{6},2^{18})$ &31 \\ 
+ & $\mathcal{H}_{12}(-2^{3},-3^{6})$ & $\mathcal{H}(4^{6},2^{18})$ &31 \\ 
 4. Square cupola
- & $\mathcal{H}_{24}(-2^{4},-5^{8})$ & $\mathcal{H}_{24}(10^{8},18^{8})$ &113 \\ 
+ & $\mathcal{H}_{24}(-2^{4},-5^{8})$ & $\mathcal{H}(10^{8},18^{8})$ &113 \\ 
 5. Pentagonal cupola
- & $\mathcal{H}_{60}(-2^{5},-11^{10})$ & $\mathcal{H}_{60}(28^{10},48^{10})$ &381 \\ 
+ & $\mathcal{H}_{60}(-2^{5},-11^{10})$ & $\mathcal{H}(28^{10},48^{10})$ &381 \\ 
 6. Pentagonal rotunda
- & $\mathcal{H}_{15}(-1^{10},-2^{10})$ & $\mathcal{H}_{15}(13^{10},12^{10})$ &126 \\ 
+ & $\mathcal{H}_{15}(-1^{10},-2^{10})$ & $\mathcal{H}(13^{10},12^{10})$ &126 \\ 
 7. Elongated triangular pyramid
- & $\mathcal{H}_{6}(-2^{3},-1^{3},-3^{1})$ & $\mathcal{H}_{6}(1^{6},4^{3},0^{3})$ &10 \\ 
+ & $\mathcal{H}_{6}(-2^{3},-1^{3},-3^{1})$ & $\mathcal{H}(1^{6},4^{3},0^{3})$ &10 \\ 
 8. Elongated square pyramid
- & $\mathcal{H}_{12}(-4^{1},-2^{4},-3^{4})$ & $\mathcal{H}_{12}(1^{4},4^{8},2^{12})$ &31 \\ 
+ & $\mathcal{H}_{12}(-4^{1},-2^{4},-3^{4})$ & $\mathcal{H}(1^{4},4^{8},2^{12})$ &31 \\ 
 9. Elongated pentagonal pyramid
- & $\mathcal{H}_{30}(-5^{6},-6^{5})$ & $\mathcal{H}_{30}(4^{30},3^{30})$ &106 \\ 
+ & $\mathcal{H}_{30}(-5^{6},-6^{5})$ & $\mathcal{H}(4^{30},3^{30})$ &106 \\ 
 10. Gyroelongated square pyramid
- & $\mathcal{H}_{12}(-4^{1},-2^{4},-3^{4})$ & $\mathcal{H}_{12}(1^{4},4^{8},2^{12})$ &31 \\ 
+ & $\mathcal{H}_{12}(-4^{1},-2^{4},-3^{4})$ & $\mathcal{H}(1^{4},4^{8},2^{12})$ &31 \\ 
 11. Gyroelongated pentagonal pyramid
- & $\mathcal{H}_{30}(-5^{6},-6^{5})$ & $\mathcal{H}_{30}(4^{30},3^{30})$ &106 \\ 
+ & $\mathcal{H}_{30}(-5^{6},-6^{5})$ & $\mathcal{H}(4^{30},3^{30})$ &106 \\ 
 12. Triangular dipyramid
- & $\mathcal{H}_{6}(-3^{2},-2^{3})$ & $\mathcal{H}_{6}(0^{6},1^{6})$ &4 \\ 
+ & $\mathcal{H}_{6}(-3^{2},-2^{3})$ & $\mathcal{H}(0^{6},1^{6})$ &4 \\ 
 13. Pentagonal dipyramid
- & $\mathcal{H}_{6}(-1^{2},-2^{5})$ & $\mathcal{H}_{6}(4^{2},1^{10})$ &10 \\ 
+ & $\mathcal{H}_{6}(-1^{2},-2^{5})$ & $\mathcal{H}(4^{2},1^{10})$ &10 \\ 
 14. Elongated triangular dipyramid
- & $\mathcal{H}_{6}(-3^{2},-1^{6})$ & $\mathcal{H}_{6}(0^{6},4^{6})$ &13 \\ 
+ & $\mathcal{H}_{6}(-3^{2},-1^{6})$ & $\mathcal{H}(0^{6},4^{6})$ &13 \\ 
 15. Elongated square dipyramid
- & $\mathcal{H}_{6}(-2^{2},-1^{8})$ & $\mathcal{H}_{6}(1^{4},4^{8})$ &19 \\ 
+ & $\mathcal{H}_{6}(-2^{2},-1^{8})$ & $\mathcal{H}(1^{4},4^{8})$ &19 \\ 
 16. Elongated pentagonal dipyramid
- & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}_{6}(4^{12})$ &25 \\ 
+ & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}(4^{12})$ &25 \\ 
 17. Gyroelongated square dipyramid
- & $\mathcal{H}_{6}(-2^{2},-1^{8})$ & $\mathcal{H}_{6}(1^{4},4^{8})$ &19 \\ 
+ & $\mathcal{H}_{6}(-2^{2},-1^{8})$ & $\mathcal{H}(1^{4},4^{8})$ &19 \\ 
 18. Elongated triangular cupola
- & $\mathcal{H}_{12}(-2^{3},-1^{6},-2^{6})$ & $\mathcal{H}_{12}(4^{6},10^{6},4^{12})$ &67 \\ 
+ & $\mathcal{H}_{12}(-2^{3},-1^{6},-2^{6})$ & $\mathcal{H}(4^{6},10^{6},4^{12})$ &67 \\ 
 19. Elongated square cupola
- & $\mathcal{H}_{24}(-2^{12},-3^{8})$ & $\mathcal{H}_{24}(10^{24},6^{24})$ &193 \\ 
+ & $\mathcal{H}_{24}(-2^{12},-3^{8})$ & $\mathcal{H}(10^{24},6^{24})$ &193 \\ 
 20. Elongated pentagonal cupola
- & $\mathcal{H}_{60}(-2^{5},-5^{10},-6^{10})$ & $\mathcal{H}_{60}(28^{10},10^{50},8^{60})$ &631 \\ 
+ & $\mathcal{H}_{60}(-2^{5},-5^{10},-6^{10})$ & $\mathcal{H}(28^{10},10^{50},8^{60})$ &631 \\ 
 21. Elongated pentagonal rotunda
- & $\mathcal{H}_{30}(-2^{10},-1^{10},-3^{10})$ & $\mathcal{H}_{30}(13^{20},28^{10},8^{30})$ &391 \\ 
+ & $\mathcal{H}_{30}(-2^{10},-1^{10},-3^{10})$ & $\mathcal{H}(13^{20},28^{10},8^{30})$ &391 \\ 
 22. Gyroelongated triangular cupola
- & $\mathcal{H}_{12}(-2^{3},-1^{6},-2^{6})$ & $\mathcal{H}_{12}(4^{6},10^{6},4^{12})$ &67 \\ 
+ & $\mathcal{H}_{12}(-2^{3},-1^{6},-2^{6})$ & $\mathcal{H}(4^{6},10^{6},4^{12})$ &67 \\ 
 23. Gyroelongated square cupola
- & $\mathcal{H}_{24}(-2^{12},-3^{8})$ & $\mathcal{H}_{24}(10^{24},6^{24})$ &193 \\ 
+ & $\mathcal{H}_{24}(-2^{12},-3^{8})$ & $\mathcal{H}(10^{24},6^{24})$ &193 
+\end{tabular}
+\pagebreak
+\begin{center}
+\section*{Johnson Solids}
+\end{center}
+\\
+\begin{tabular}{l | c | c| r}
+\textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
+\hline
 24. Gyroelongated pentagonal cupola
- & $\mathcal{H}_{60}(-2^{5},-5^{10},-6^{10})$ & $\mathcal{H}_{60}(28^{10},10^{50},8^{60})$ &631 \\ 
+ & $\mathcal{H}_{60}(-2^{5},-5^{10},-6^{10})$ & $\mathcal{H}(28^{10},10^{50},8^{60})$ &631 \\ 
 25. Gyroelongated pentagonal rotunda
- & $\mathcal{H}_{30}(-2^{10},-1^{10},-3^{10})$ & $\mathcal{H}_{30}(13^{20},28^{10},8^{30})$ &391 \\ 
+ & $\mathcal{H}_{30}(-2^{10},-1^{10},-3^{10})$ & $\mathcal{H}(13^{20},28^{10},8^{30})$ &391 \\ 
 26. Gyrobifastigium
- & $\mathcal{H}_{6}(-2^{4},-1^{4})$ & $\mathcal{H}_{6}(1^{8},4^{4})$ &13 \\ 
+ & $\mathcal{H}_{6}(-2^{4},-1^{4})$ & $\mathcal{H}(1^{8},4^{4})$ &13 \\ 
 27. Triangular orthobicupola
- & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}_{6}(4^{12})$ &25 \\ 
+ & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}(4^{12})$ &25 \\ 
 28. Square orthobicupola
- & $\mathcal{H}_{12}(-1^{8},-2^{8})$ & $\mathcal{H}_{12}(10^{8},4^{16})$ &73 \\ 
+ & $\mathcal{H}_{12}(-1^{8},-2^{8})$ & $\mathcal{H}(10^{8},4^{16})$ &73 \\ 
 29. Square gyrobicupola
- & $\mathcal{H}_{12}(-1^{8},-2^{8})$ & $\mathcal{H}_{12}(10^{8},4^{16})$ &73 \\ 
+ & $\mathcal{H}_{12}(-1^{8},-2^{8})$ & $\mathcal{H}(10^{8},4^{16})$ &73 \\ 
 30. Pentagonal orthobicupola
- & $\mathcal{H}_{30}(-1^{10},-5^{10})$ & $\mathcal{H}_{30}(28^{10},4^{50})$ &241 \\ 
+ & $\mathcal{H}_{30}(-1^{10},-5^{10})$ & $\mathcal{H}(28^{10},4^{50})$ &241 \\ 
 31. Pentagonal gyrobicupola
- & $\mathcal{H}_{30}(-1^{10},-5^{10})$ & $\mathcal{H}_{30}(28^{10},4^{50})$ &241 \\ 
+ & $\mathcal{H}_{30}(-1^{10},-5^{10})$ & $\mathcal{H}(28^{10},4^{50})$ &241 \\ 
+ 32. Pentagonal orthocupolarotunda
+ & $\mathcal{H}_{60}(-2^{5},-7^{10},-4^{10})$ & $\mathcal{H}(28^{10},52^{10},13^{40})$ &661 \\ 
+33. Pentagonal gyrocupolarotunda
+ & $\mathcal{H}_{60}(-2^{5},-7^{10},-4^{10})$ & $\mathcal{H}(28^{10},52^{10},13^{40})$ &661 \\ 
+34. Pentagonal orthobirotunda
+ & $\mathcal{H}_{15}(-1^{30})$ & $\mathcal{H}(13^{30})$ &196 \\ 
+35. Elongated triangular orthobicupola
+ & $\mathcal{H}_{12}(-1^{12},-2^{6})$ & $\mathcal{H}(10^{12},4^{12})$ &85 \\ 
+36. Elongated triangular gyrobicupola
+ & $\mathcal{H}_{12}(-1^{12},-2^{6})$ & $\mathcal{H}(10^{12},4^{12})$ &85 \\ 
+37. Elongated square gyrobicupola
+ & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}(10^{24})$ &121 \\ 
+38. Elongated pentagonal orthobicupola
+ & $\mathcal{H}_{60}(-2^{10},-5^{20})$ & $\mathcal{H}(28^{20},10^{100})$ &781 \\ 
+39. Elongated pentagonal gyrobicupola
+ & $\mathcal{H}_{60}(-2^{10},-5^{20})$ & $\mathcal{H}(28^{20},10^{100})$ &781 \\ 
+40. Elongated pentagonal orthocupolarotunda
+ & $\mathcal{H}_{60}(-2^{15},-5^{10},-4^{10})$ & $\mathcal{H}(28^{30},10^{50},13^{40})$ &931 \\ 
+41. Elongated pentagonal gyrocupolarotunda
+ & $\mathcal{H}_{60}(-2^{15},-5^{10},-4^{10})$ & $\mathcal{H}(28^{30},10^{50},13^{40})$ &931 \\ 
+42. Elongated pentagonal orthobirotunda
+ & $\mathcal{H}_{30}(-1^{20},-2^{10})$ & $\mathcal{H}(28^{20},13^{20})$ &411 \\ 
+43. Elongated pentagonal gyrobirotunda
+ & $\mathcal{H}_{30}(-1^{20},-2^{10})$ & $\mathcal{H}(28^{20},13^{20})$ &411 \\ 
+44. Gyroelongated triangular bicupola
+ & $\mathcal{H}_{12}(-1^{18})$ & $\mathcal{H}(10^{18})$ &91 \\ 
+45. Gyroelongated square bicupola
+ & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}(10^{24})$ &121 \\ 
+46. Gyroelongated pentagonal bicupola
+ & $\mathcal{H}_{60}(-2^{10},-5^{20})$ & $\mathcal{H}(28^{20},10^{100})$ &781 \\ 
 \end{tabular}
 \pagebreak
 \
@@ -140,68 +181,52 @@ Snub Dodecahedron
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
-32. Pentagonal orthocupolarotunda
- & $\mathcal{H}_{60}(-2^{5},-7^{10},-4^{10})$ & $\mathcal{H}_{60}(28^{10},52^{10},13^{40})$ &661 \\ 
-33. Pentagonal gyrocupolarotunda
- & $\mathcal{H}_{60}(-2^{5},-7^{10},-4^{10})$ & $\mathcal{H}_{60}(28^{10},52^{10},13^{40})$ &661 \\ 
-34. Pentagonal orthobirotunda
- & $\mathcal{H}_{15}(-1^{30})$ & $\mathcal{H}_{15}(13^{30})$ &196 \\ 
-35. Elongated triangular orthobicupola
- & $\mathcal{H}_{12}(-1^{12},-2^{6})$ & $\mathcal{H}_{12}(10^{12},4^{12})$ &85 \\ 
-36. Elongated triangular gyrobicupola
- & $\mathcal{H}_{12}(-1^{12},-2^{6})$ & $\mathcal{H}_{12}(10^{12},4^{12})$ &85 \\ 
-37. Elongated square gyrobicupola
- & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}_{12}(10^{24})$ &121 \\ 
-38. Elongated pentagonal orthobicupola
- & $\mathcal{H}_{60}(-2^{10},-5^{20})$ & $\mathcal{H}_{60}(28^{20},10^{100})$ &781 \\ 
-39. Elongated pentagonal gyrobicupola
- & $\mathcal{H}_{60}(-2^{10},-5^{20})$ & $\mathcal{H}_{60}(28^{20},10^{100})$ &781 \\ 
-40. Elongated pentagonal orthocupolarotunda
- & $\mathcal{H}_{60}(-2^{15},-5^{10},-4^{10})$ & $\mathcal{H}_{60}(28^{30},10^{50},13^{40})$ &931 \\ 
-41. Elongated pentagonal gyrocupolarotunda
- & $\mathcal{H}_{60}(-2^{15},-5^{10},-4^{10})$ & $\mathcal{H}_{60}(28^{30},10^{50},13^{40})$ &931 \\ 
-42. Elongated pentagonal orthobirotunda
- & $\mathcal{H}_{30}(-1^{20},-2^{10})$ & $\mathcal{H}_{30}(28^{20},13^{20})$ &411 \\ 
-43. Elongated pentagonal gyrobirotunda
- & $\mathcal{H}_{30}(-1^{20},-2^{10})$ & $\mathcal{H}_{30}(28^{20},13^{20})$ &411 \\ 
-44. Gyroelongated triangular bicupola
- & $\mathcal{H}_{12}(-1^{18})$ & $\mathcal{H}_{12}(10^{18})$ &91 \\ 
-45. Gyroelongated square bicupola
- & $\mathcal{H}_{12}(-1^{24})$ & $\mathcal{H}_{12}(10^{24})$ &121 \\ 
-46. Gyroelongated pentagonal bicupola
- & $\mathcal{H}_{60}(-2^{10},-5^{20})$ & $\mathcal{H}_{60}(28^{20},10^{100})$ &781 \\ 
 47. Gyroelongated pentagonal cupolarotunda
- & $\mathcal{H}_{60}(-2^{15},-5^{10},-4^{10})$ & $\mathcal{H}_{60}(28^{30},10^{50},13^{40})$ &931 \\ 
+ & $\mathcal{H}_{60}(-2^{15},-5^{10},-4^{10})$ & $\mathcal{H}(28^{30},10^{50},13^{40})$ &931 \\ 
 48. Gyroelongated pentagonal birotunda
- & $\mathcal{H}_{30}(-1^{20},-2^{10})$ & $\mathcal{H}_{30}(28^{20},13^{20})$ &411 \\ 
+ & $\mathcal{H}_{30}(-1^{20},-2^{10})$ & $\mathcal{H}(28^{20},13^{20})$ &411 \\ 
 49. Augmented triangular prism
- & $\mathcal{H}_{3}(-1^{7})$ & $\mathcal{H}_{3}(1^{7})$ &4 \\ 
+ & $\mathcal{H}_{3}(-1^{7})$ & $\mathcal{H}(1^{7})$ &4 \\ 
 50. Biaugmented triangular prism
- & $\mathcal{H}_{12}(-3^{4},-2^{2},-4^{2})$ & $\mathcal{H}_{12}(2^{12},4^{4},1^{8})$ &25 \\ 
+ & $\mathcal{H}_{12}(-3^{4},-2^{2},-4^{2})$ & $\mathcal{H}(2^{12},4^{4},1^{8})$ &25 \\ 
 51. Triaugmented triangular prism
- & $\mathcal{H}_{6}(-1^{6},-2^{3})$ & $\mathcal{H}_{6}(4^{6},1^{6})$ &16 \\ 
+ & $\mathcal{H}_{6}(-1^{6},-2^{3})$ & $\mathcal{H}(4^{6},1^{6})$ &16 \\ 
 52. Augmented pentagonal prisim
- & $\mathcal{H}_{60}(-12^{6},-7^{4},-20^{1})$ & $\mathcal{H}_{60}(3^{72},52^{4},1^{20})$ &223 \\ 
+ & $\mathcal{H}_{60}(-12^{6},-7^{4},-20^{1})$ & $\mathcal{H}(3^{72},52^{4},1^{20})$ &223 \\ 
 53. Biaugmented pentagonal prism
- & $\mathcal{H}_{60}(-12^{2},-7^{8},-20^{2})$ & $\mathcal{H}_{60}(3^{24},52^{8},1^{40})$ &265 \\ 
+ & $\mathcal{H}_{60}(-12^{2},-7^{8},-20^{2})$ & $\mathcal{H}(3^{24},52^{8},1^{40})$ &265 \\ 
 54. Augmented hexagonal prism
- & $\mathcal{H}_{12}(-4^{1},-1^{4},-2^{8})$ & $\mathcal{H}_{12}(1^{4},10^{4},4^{16})$ &55 \\ 
+ & $\mathcal{H}_{12}(-4^{1},-1^{4},-2^{8})$ & $\mathcal{H}(1^{4},10^{4},4^{16})$ &55 \\ 
 55. Parabiaugmented hexagonal prism
- & $\mathcal{H}_{12}(-4^{2},-1^{8},-2^{4})$ & $\mathcal{H}_{12}(1^{8},10^{8},4^{8})$ &61 \\ 
+ & $\mathcal{H}_{12}(-4^{2},-1^{8},-2^{4})$ & $\mathcal{H}(1^{8},10^{8},4^{8})$ &61 \\ 
 56. Metabiaugmented hexagonal prism
- & $\mathcal{H}_{12}(-4^{2},-1^{8},-2^{4})$ & $\mathcal{H}_{12}(1^{8},10^{8},4^{8})$ &61 \\ 
+ & $\mathcal{H}_{12}(-4^{2},-1^{8},-2^{4})$ & $\mathcal{H}(1^{8},10^{8},4^{8})$ &61 \\ 
 57. Triaugmented hexagonal prism
- & $\mathcal{H}_{12}(-4^{3},-1^{12})$ & $\mathcal{H}_{12}(1^{12},10^{12})$ &67 \\ 
+ & $\mathcal{H}_{12}(-4^{3},-1^{12})$ & $\mathcal{H}(1^{12},10^{12})$ &67 \\ 
 58. Augmented dodecahedron
- & $\mathcal{H}_{30}(-5^{1},-2^{5},-3^{15})$ & $\mathcal{H}_{30}(4^{5},13^{10},8^{45})$ &256 \\ 
+ & $\mathcal{H}_{30}(-5^{1},-2^{5},-3^{15})$ & $\mathcal{H}(4^{5},13^{10},8^{45})$ &256 \\ 
 59. Parabiaugmented dodecahedron
- & $\mathcal{H}_{30}(-5^{2},-2^{10},-3^{10})$ & $\mathcal{H}_{30}(4^{10},13^{20},8^{30})$ &271 \\ 
+ & $\mathcal{H}_{30}(-5^{2},-2^{10},-3^{10})$ & $\mathcal{H}(4^{10},13^{20},8^{30})$ &271 \\ 
 60. Metabiaugmented dodecahedron
- & $\mathcal{H}_{30}(-5^{2},-2^{10},-3^{10})$ & $\mathcal{H}_{30}(4^{10},13^{20},8^{30})$ &271 \\ 
+ & $\mathcal{H}_{30}(-5^{2},-2^{10},-3^{10})$ & $\mathcal{H}(4^{10},13^{20},8^{30})$ &271 \\ 
 61. Triaugmented dodecahedron
- & $\mathcal{H}_{30}(-5^{3},-2^{15},-3^{5})$ & $\mathcal{H}_{30}(4^{15},13^{30},8^{15})$ &286 \\ 
+ & $\mathcal{H}_{30}(-5^{3},-2^{15},-3^{5})$ & $\mathcal{H}(4^{15},13^{30},8^{15})$ &286 \\ 
 62. Metabidiminished icosahedron
- & $\mathcal{H}_{30}(-5^{2},-6^{6},-7^{2})$ & $\mathcal{H}_{30}(4^{10},3^{36},22^{2})$ &97 \\ 
+ & $\mathcal{H}_{30}(-5^{2},-6^{6},-7^{2})$ & $\mathcal{H}(4^{10},3^{36},22^{2})$ &97 \\ 
+63. Tridiminished icosahedron
+ & $\mathcal{H}_{30}(-6^{3},-7^{6})$ & $\mathcal{H}(3^{18},22^{6})$ &94 \\ 
+64. Augmented tridiminished icosahedron
+ & $\mathcal{H}_{30}(-15^{1},-2^{3},-7^{3},-6^{3})$ & $\mathcal{H}(0^{15},13^{6},22^{3},3^{18})$ &100 \\ 
+65. Augmented truncated tetrahedron
+ & $\mathcal{H}_{60}(-10^{3},-7^{6},-14^{6})$ & $\mathcal{H}(4^{30},52^{6},22^{12})$ &349 \\ 
+66. Augmented truncated cube
+ & $\mathcal{H}_{24}(-2^{16},-1^{8},-2^{4})$ & $\mathcal{H}(10^{32},22^{8},10^{8})$ &289 \\ 
+67. Biaugmented truncated cube
+ & $\mathcal{H}_{24}(-2^{8},-1^{16},-2^{8})$ & $\mathcal{H}(10^{16},22^{16},10^{16})$ &337 \\ 
+68. Augmented truncated dodecahedron
+ & $\mathcal{H}_{60}(-2^{55},-1^{10})$ & $\mathcal{H}(28^{110},58^{10})$ &1831 \\ 
+69. Parabiaugmented truncated dodecahedron
+ & $\mathcal{H}_{60}(-2^{50},-1^{20})$ & $\mathcal{H}(28^{100},58^{20})$ &1981 \\ 
  \end{tabular}
 \pagebreak
 \
@@ -212,87 +237,73 @@ Snub Dodecahedron
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
-63. Tridiminished icosahedron
- & $\mathcal{H}_{30}(-6^{3},-7^{6})$ & $\mathcal{H}_{30}(3^{18},22^{6})$ &94 \\ 
-64. Augmented tridiminished icosahedron
- & $\mathcal{H}_{30}(-15^{1},-2^{3},-7^{3},-6^{3})$ & $\mathcal{H}_{30}(0^{15},13^{6},22^{3},3^{18})$ &100 \\ 
-65. Augmented truncated tetrahedron
- & $\mathcal{H}_{60}(-10^{3},-7^{6},-14^{6})$ & $\mathcal{H}_{60}(4^{30},52^{6},22^{12})$ &349 \\ 
-66. Augmented truncated cube
- & $\mathcal{H}_{24}(-2^{16},-1^{8},-2^{4})$ & $\mathcal{H}_{24}(10^{32},22^{8},10^{8})$ &289 \\ 
-67. Biaugmented truncated cube
- & $\mathcal{H}_{24}(-2^{8},-1^{16},-2^{8})$ & $\mathcal{H}_{24}(10^{16},22^{16},10^{16})$ &337 \\ 
-68. Augmented truncated dodecahedron
- & $\mathcal{H}_{60}(-2^{55},-1^{10})$ & $\mathcal{H}_{60}(28^{110},58^{10})$ &1831 \\ 
-69. Parabiaugmented truncated dodecahedron
- & $\mathcal{H}_{60}(-2^{50},-1^{20})$ & $\mathcal{H}_{60}(28^{100},58^{20})$ &1981 \\ 
 70. Metabiaugmented truncated dodecahedron
- & $\mathcal{H}_{60}(-2^{50},-1^{20})$ & $\mathcal{H}_{60}(28^{100},58^{20})$ &1981 \\ 
+ & $\mathcal{H}_{60}(-2^{50},-1^{20})$ & $\mathcal{H}(28^{100},58^{20})$ &1981 \\ 
 71. Triaugmented truncated dodecahedron
- & $\mathcal{H}_{60}(-2^{45},-1^{30})$ & $\mathcal{H}_{60}(28^{90},58^{30})$ &2131 \\ 
+ & $\mathcal{H}_{60}(-2^{45},-1^{30})$ & $\mathcal{H}(28^{90},58^{30})$ &2131 \\ 
 72. Gyrate rhombicosidodecahedron
- & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}_{30}(28^{60})$ &841 \\ 
+ & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}(28^{60})$ &841 \\ 
 73. Parabigyrate rhombicosidodecahedron
- & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}_{30}(28^{60})$ &841 \\ 
+ & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}(28^{60})$ &841 \\ 
 74. Metabigyrate rhombicosidodecahedron
- & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}_{30}(28^{60})$ &841 \\ 
+ & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}(28^{60})$ &841 \\ 
 75. Trigyrate rhombicosidodecahedron
- & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}_{30}(28^{60})$ &841 \\ 
+ & $\mathcal{H}_{30}(-1^{60})$ & $\mathcal{H}(28^{60})$ &841 \\ 
 76. Diminished rhombicosidodecahedron
- & $\mathcal{H}_{60}(-3^{10},-2^{45})$ & $\mathcal{H}_{60}(18^{30},28^{90})$ &1531 \\ 
+ & $\mathcal{H}_{60}(-3^{10},-2^{45})$ & $\mathcal{H}(18^{30},28^{90})$ &1531 \\ 
 77. Paragyrate diminished rhombicosidodecahedron
- & $\mathcal{H}_{60}(-3^{10},-2^{45})$ & $\mathcal{H}_{60}(18^{30},28^{90})$ &1531 \\ 
+ & $\mathcal{H}_{60}(-3^{10},-2^{45})$ & $\mathcal{H}(18^{30},28^{90})$ &1531 \\ 
 78. Metagyrate diminished rhombicosidodecahedron
- & $\mathcal{H}_{60}(-3^{10},-2^{45})$ & $\mathcal{H}_{60}(18^{30},28^{90})$ &1531 \\ 
+ & $\mathcal{H}_{60}(-3^{10},-2^{45})$ & $\mathcal{H}(18^{30},28^{90})$ &1531 \\ 
 79. Bigyrate diminished rhombicosidodecahedron
- & $\mathcal{H}_{60}(-3^{10},-2^{45})$ & $\mathcal{H}_{60}(18^{30},28^{90})$ &1531 \\ 
+ & $\mathcal{H}_{60}(-3^{10},-2^{45})$ & $\mathcal{H}(18^{30},28^{90})$ &1531 \\ 
 80. Parabidiminished rhombicosidodecahedron
- & $\mathcal{H}_{60}(-3^{20},-2^{30})$ & $\mathcal{H}_{60}(18^{60},28^{60})$ &1381 \\ 
+ & $\mathcal{H}_{60}(-3^{20},-2^{30})$ & $\mathcal{H}(18^{60},28^{60})$ &1381 \\ 
 81. Metabidiminished rhombicosidodecahedron
- & $\mathcal{H}_{60}(-3^{20},-2^{30})$ & $\mathcal{H}_{60}(18^{60},28^{60})$ &1381 \\ 
+ & $\mathcal{H}_{60}(-3^{20},-2^{30})$ & $\mathcal{H}(18^{60},28^{60})$ &1381 \\ 
 82. Gyrate bidiminished rhombicosidodecahedron
- & $\mathcal{H}_{60}(-3^{20},-2^{30})$ & $\mathcal{H}_{60}(18^{60},28^{60})$ &1381 \\ 
+ & $\mathcal{H}_{60}(-3^{20},-2^{30})$ & $\mathcal{H}(18^{60},28^{60})$ &1381 \\ 
 83. Tridiminished rhombicosidodecahedron
- & $\mathcal{H}_{60}(-3^{30},-2^{15})$ & $\mathcal{H}_{60}(18^{90},28^{30})$ &1231 \\ 
+ & $\mathcal{H}_{60}(-3^{30},-2^{15})$ & $\mathcal{H}(18^{90},28^{30})$ &1231 \\ 
 84. Snub disphenoid
- & $\mathcal{H}_{6}(-1^{4},-2^{4})$ & $\mathcal{H}_{6}(4^{4},1^{8})$ &13 \\ 
+ & $\mathcal{H}_{6}(-1^{4},-2^{4})$ & $\mathcal{H}(4^{4},1^{8})$ &13 \\ 
 85. Snub square antiprism
- & $\mathcal{H}_{12}(-1^{8},-2^{8})$ & $\mathcal{H}_{12}(10^{8},4^{16})$ &73 \\ 
+ & $\mathcal{H}_{12}(-1^{8},-2^{8})$ & $\mathcal{H}(10^{8},4^{16})$ &73 \\ 
 86. Sphenocorona
- & $\mathcal{H}_{12}(-3^{4},-2^{4},-4^{2})$ & $\mathcal{H}_{12}(2^{12},4^{8},1^{8})$ &33 \\ 
+ & $\mathcal{H}_{12}(-3^{4},-2^{4},-4^{2})$ & $\mathcal{H}(2^{12},4^{8},1^{8})$ &33 \\ 
 87. Augmented sphenocorona
- & $\mathcal{H}_{12}(-1^{2},-3^{2},-2^{6},-4^{1})$ & $\mathcal{H}_{12}(10^{2},2^{6},4^{12},1^{4})$ &43 \\ 
+ & $\mathcal{H}_{12}(-1^{2},-3^{2},-2^{6},-4^{1})$ & $\mathcal{H}(10^{2},2^{6},4^{12},1^{4})$ &43 \\ 
 88. Sphenomegacorona
- & $\mathcal{H}_{96}(-63^{4},-32^{2},-16^{6})$ & $\mathcal{H}_{96}(10^{12},1^{64},4^{96})$ &285 \\ 
+ & $\mathcal{H}_{96}(-63^{4},-32^{2},-16^{6})$ & $\mathcal{H}(10^{12},1^{64},4^{96})$ &285 \\ 
 89. Hebesphenomegacorona
- & $\mathcal{H}_{12}(-2^{10},-1^{4})$ & $\mathcal{H}_{12}(4^{20},10^{4})$ &61 \\ 
+ & $\mathcal{H}_{12}(-2^{10},-1^{4})$ & $\mathcal{H}(4^{20},10^{4})$ &61 \\ 
 90. Disphenocingulum
- & $\mathcal{H}_{12}(-2^{8},-1^{8})$ & $\mathcal{H}_{12}(4^{16},10^{8})$ &73 \\ 
+ & $\mathcal{H}_{12}(-2^{8},-1^{8})$ & $\mathcal{H}(4^{16},10^{8})$ &73 \\ 
 91. Bilunabirotunda
- & $\mathcal{H}_{60}(-14^{4},-4^{2},-7^{8})$ & $\mathcal{H}_{60}(22^{8},13^{8},52^{8})$ &349 \\ 
+ & $\mathcal{H}_{60}(-14^{4},-4^{2},-7^{8})$ & $\mathcal{H}(22^{8},13^{8},52^{8})$ &349 \\ 
 92. Triangular hebesphenorotunda
- & $\mathcal{H}_{60}(-12^{3},-4^{3},-7^{6},-5^{6})$ & $\mathcal{H}_{60}(3^{36},13^{12},52^{6},10^{30})$ &439 \\ 
+ & $\mathcal{H}_{60}(-12^{3},-4^{3},-7^{6},-5^{6})$ & $\mathcal(3^{36},13^{12},52^{6},10^{30})$ &439 \\ 
 
 \end{tabular}
 \pagebreak
 \
 \begin{center}
-\section*{n-(Anti-)Prismis}
+\section*{n-Prismis/(Antiprisims}
 \end{center}
 \\
 \\
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
-3 & $\mathcal{H}_{3}(-1^{6})$ & $\mathcal{H}_{3}(1^{6})$ &4 \\ 
-4 & $\mathcal{H}_{4}(-1^{8})$ & $\mathcal{H}_{4}(2^{8})$ &9 \\ 
-5 & $\mathcal{H}_{5}(-1^{10})$ & $\mathcal{H}_{5}(3^{10})$ &16 \\ 
-6 & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}_{6}(4^{12})$ &25 \\ 
-7 & $\mathcal{H}_{7}(-1^{14})$ & $\mathcal{H}_{7}(5^{14})$ &36 \\ 
-8 & $\mathcal{H}_{8}(-1^{16})$ & $\mathcal{H}_{8}(6^{16})$ &49 \\ 
-9 & $\mathcal{H}_{9}(-1^{18})$ & $\mathcal{H}_{9}(7^{18})$ &64 \\ 
+3 & $\mathcal{H}_{3}(-1^{6})$ & $\mathcal{H}(1^{6})$ &4 \\ 
+4 & $\mathcal{H}_{4}(-1^{8})$ & $\mathcal{H}(2^{8})$ &9 \\ 
+5 & $\mathcal{H}_{5}(-1^{10})$ & $\mathcal{H}(3^{10})$ &16 \\ 
+6 & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}(4^{12})$ &25 \\ 
+7 & $\mathcal{H}_{7}(-1^{14})$ & $\mathcal{H}(5^{14})$ &36 \\ 
+8 & $\mathcal{H}_{8}(-1^{16})$ & $\mathcal{H}(6^{16})$ &49 \\ 
+9 & $\mathcal{H}_{9}(-1^{18})$ & $\mathcal{H}(7^{18})$ &64 \\ 
 ... & ... & ... & ... \\ 
-n & $\mathcal{H}_{n}(-1^{2n})$ & $\mathcal{H}_{n}((n-2)^{2n})$ & $(n^{2} - 2n + 1)$  \\ 
+n & $\mathcal{H}_{n}(-1^{2n})$ & $\mathcal{H}((n-2)^{2n})$ & $(n^{2} - 2n + 1)$  \\ 
  
 \end{tabular}
 \end{document} 
