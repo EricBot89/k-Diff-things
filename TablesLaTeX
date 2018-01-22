@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\title{Tables of k-Differential Strata}
+\title{Tables of k-Differential Strata for Convex Polygons}
 \author{}
 \usepackage[landscape]{geometry}
 
@@ -64,7 +64,6 @@ Snub Dodecahedron
 \begin{center}
 \section*{Johnson Solids}
 \end{center}
-\\
 \\
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
@@ -131,6 +130,16 @@ Snub Dodecahedron
  & $\mathcal{H}_{30}(-1^{10},-5^{10})$ & $\mathcal{H}_{30}(28^{10},4^{50})$ &241 \\ 
 31. Pentagonal gyrobicupola
  & $\mathcal{H}_{30}(-1^{10},-5^{10})$ & $\mathcal{H}_{30}(28^{10},4^{50})$ &241 \\ 
+\end{tabular}
+\pagebreak
+\
+\begin{center}
+\section*{Johnson Solids}
+\end{center}
+\\
+\begin{tabular}{l | c | c| r}
+\textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
+\hline
 32. Pentagonal orthocupolarotunda
  & $\mathcal{H}_{60}(-2^{5},-7^{10},-4^{10})$ & $\mathcal{H}_{60}(28^{10},52^{10},13^{40})$ &661 \\ 
 33. Pentagonal gyrocupolarotunda
@@ -193,6 +202,16 @@ Snub Dodecahedron
  & $\mathcal{H}_{30}(-5^{3},-2^{15},-3^{5})$ & $\mathcal{H}_{30}(4^{15},13^{30},8^{15})$ &286 \\ 
 62. Metabidiminished icosahedron
  & $\mathcal{H}_{30}(-5^{2},-6^{6},-7^{2})$ & $\mathcal{H}_{30}(4^{10},3^{36},22^{2})$ &97 \\ 
+ \end{tabular}
+\pagebreak
+\
+\begin{center}
+\section*{Johnson Solids}
+\end{center}
+\\
+\begin{tabular}{l | c | c| r}
+\textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
+\hline
 63. Tridiminished icosahedron
  & $\mathcal{H}_{30}(-6^{3},-7^{6})$ & $\mathcal{H}_{30}(3^{18},22^{6})$ &94 \\ 
 64. Augmented tridiminished icosahedron
