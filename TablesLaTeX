@@ -64,8 +64,8 @@ Snub Dodecahedron
 \begin{center}
 \section*{Johnson Solids}
 \end{center}
-\
-\
+\\
+\\
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
@@ -255,5 +255,25 @@ Snub Dodecahedron
  & $\mathcal{H}_{60}(-12^{3},-4^{3},-7^{6},-5^{6})$ & $\mathcal{H}_{60}(3^{36},13^{12},52^{6},10^{30})$ &439 \\ 
 
 \end{tabular}
+\pagebreak
+\
+\begin{center}
+\section*{n-(Anti-)Prismis}
+\end{center}
 \\
+\\
+\begin{tabular}{l | c | c| r}
+\textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
+\hline
+3 & $\mathcal{H}_{3}(-1^{6})$ & $\mathcal{H}_{3}(1^{6})$ &4 \\ 
+4 & $\mathcal{H}_{4}(-1^{8})$ & $\mathcal{H}_{4}(2^{8})$ &9 \\ 
+5 & $\mathcal{H}_{5}(-1^{10})$ & $\mathcal{H}_{5}(3^{10})$ &16 \\ 
+6 & $\mathcal{H}_{6}(-1^{12})$ & $\mathcal{H}_{6}(4^{12})$ &25 \\ 
+7 & $\mathcal{H}_{7}(-1^{14})$ & $\mathcal{H}_{7}(5^{14})$ &36 \\ 
+8 & $\mathcal{H}_{8}(-1^{16})$ & $\mathcal{H}_{8}(6^{16})$ &49 \\ 
+9 & $\mathcal{H}_{9}(-1^{18})$ & $\mathcal{H}_{9}(7^{18})$ &64 \\ 
+... & ... & ... & ... \\ 
+n & $\mathcal{H}_{n}(-1^{2n})$ & $\mathcal{H}_{n}((n-2)^{2n})$ & $(n^{2} - 2n + 1)$  \\ 
+ 
+\end{tabular}
 \end{document} 
