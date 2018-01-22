@@ -113,10 +113,12 @@ def  differentialStrata(angleList,opt):
 	K = '{' + K + '}'
 	begining = str("\\mathcal{}_{}").format(H, K)
 	if opt == 'k':
+		begining = str("\\mathcal{}_{}").format(H, K)
 		kd = getKdiffZerosForLtx(angleList)
 		kdStrata = begining + zeroesListBuilder(kd)
 		return kdStrata
 	elif opt == 'a':
+		begining = str("\\mathcal{}").format(H)
 		ad = abelianZerosForLtx(angleList)
 		adStrata = begining + zeroesListBuilder(ad)
 		return adStrata
