@@ -288,13 +288,15 @@ Snub Dodecahedron
 \pagebreak
 \
 \begin{center}
-\section*{n-Prismis/(Antiprisims}
+\section*{n-Prismis/Antiprisims}
 \end{center}
 \\
 \\
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
+1 & $\mathcal{H}_{1}(-1^{2})$ & $\mathcal{H}(-1^{2})$ &0 \\ 
+2 & $\mathcal{H}_{2}(-1^{4})$ & $\mathcal{H}(0^{4})$ &1 \\ 
 3 & $\mathcal{H}_{3}(-1^{6})$ & $\mathcal{H}(1^{6})$ &4 \\ 
 4 & $\mathcal{H}_{4}(-1^{8})$ & $\mathcal{H}(2^{8})$ &9 \\ 
 5 & $\mathcal{H}_{5}(-1^{10})$ & $\mathcal{H}(3^{10})$ &16 \\ 
