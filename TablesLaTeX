@@ -186,7 +186,7 @@ Snub Dodecahedron
 48. Gyroelongated pentagonal birotunda
  & $\mathcal{H}_{30}(-1^{20},-2^{10})$ & $\mathcal{H}(28^{20},13^{20})$ &411 \\ 
 49. Augmented triangular prism
- & $\mathcal{H}_{3}(-1^{7})$ & $\mathcal{H}(1^{7})$ &4 \\ 
+ & $\mathcal{H}_{12}(-4^{3},-3^{4})$ & $\mathcal{H}(1^{12},2^{12})$ &19 \\ 
 50. Biaugmented triangular prism
  & $\mathcal{H}_{12}(-3^{4},-2^{2},-4^{2})$ & $\mathcal{H}(2^{12},4^{4},1^{8})$ &25 \\ 
 51. Triaugmented triangular prism
@@ -288,14 +288,13 @@ Snub Dodecahedron
 \pagebreak
 \
 \begin{center}
-\section*{n-Prismis/Antiprisims}
+\section*{n-Prisims/Antiprisims}
 \end{center}
 \\
 \\
 \begin{tabular}{l | c | c| r}
 \textbf{Polyheron} & \textbf{Stratum of k-differential} &  \textbf{Stratum of Covering} & \textbf{Genus} \\ 
 \hline
-1 & $\mathcal{H}_{1}(-1^{2})$ & $\mathcal{H}(-1^{2})$ &0 \\ 
 2 & $\mathcal{H}_{2}(-1^{4})$ & $\mathcal{H}(0^{4})$ &1 \\ 
 3 & $\mathcal{H}_{3}(-1^{6})$ & $\mathcal{H}(1^{6})$ &4 \\ 
 4 & $\mathcal{H}_{4}(-1^{8})$ & $\mathcal{H}(2^{8})$ &9 \\ 
@@ -305,7 +304,7 @@ Snub Dodecahedron
 8 & $\mathcal{H}_{8}(-1^{16})$ & $\mathcal{H}(6^{16})$ &49 \\ 
 9 & $\mathcal{H}_{9}(-1^{18})$ & $\mathcal{H}(7^{18})$ &64 \\ 
 ... & ... & ... & ... \\ 
-n & $\mathcal{H}_{n}(-1^{2n})$ & $\mathcal{H}((n-2)^{2n})$ & $(n^{2} - 2n + 1)$  \\ 
+n & $\mathcal{H}_{n}(-1^{2n})$ & $\mathcal{H}((n-2)^{2n})$ & $(n-1)^{2}$  \\ 
  
 \end{tabular}
 \end{document} 
